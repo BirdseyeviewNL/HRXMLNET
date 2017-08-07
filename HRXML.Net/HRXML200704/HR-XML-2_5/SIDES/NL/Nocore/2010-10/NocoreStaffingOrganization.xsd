@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.nocore.nl/2010-10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" xmlns:setu="http://ns.setu.nl/2008-01" targetNamespace="http://www.nocore.nl/2010-10" elementFormDefault="qualified" version="2010-10">
+	<xsd:annotation>
+		<xsd:documentation>
+
+			Name: NocoreHumanResource.xsd
+			Purpose: Defines the additional StaffingOrganization schema elements for the Flex2GO and Nocore product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.setu.nl/2008-01" schemaLocation="../../2008-01/AssignmentAdditionalNL.xsd" />
+	<xsd:import namespace="http://ns.setu.nl/2008-01" schemaLocation="../../2008-01/HumanResourceAdditionalNL.xsd" />
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../CPO/EntityIdType.xsd" />
+	<xsd:include schemaLocation="NocoreLocation.xsd"/>
+	<xsd:element name="NocoreStaffingOrganization" type="NocoreStaffingOrganizationType"/>
+	<xsd:complexType name="NocoreStaffingOrganizationType">
+		<xsd:sequence>
+			<xsd:element name="AccountManager" type="xsd:string" minOccurs="0" />
+			<xsd:element name="CLA" type="setu:CLAReferenceType" minOccurs="0"/>
+			<xsd:element name="VATNumber" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Location" type="NocoreLocationType" />
+			<xsd:element name="Status" type="xsd:string" />
+			<xsd:element name="Modified" type="xsd:dateTime" />
+			<xsd:element name="Contacts" type="NocoreContactType" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="Internal" type="xsd:boolean" minOccurs="0" />
+    </xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="NocoreContactType">
+		<xsd:sequence>
+			<xsd:element name="ContactId" type="hr:EntityIdType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Initials" type="xsd:string" />
+			<xsd:element name="Sex" type="setu:SexType" />
+			<xsd:element name="Primary" type="xsd:boolean" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

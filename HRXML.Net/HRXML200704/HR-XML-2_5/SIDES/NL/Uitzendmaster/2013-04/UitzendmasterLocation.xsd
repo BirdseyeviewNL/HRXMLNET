@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.combil.nl/2013-04" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" targetNamespace="http://www.combil.nl/2013-04" elementFormDefault="qualified" version="2013-04">
+	<xsd:annotation>
+		<xsd:documentation>
+
+      Name: UitzendmasterLocation.xsd
+      Purpose: Defines the additional Uitzendmaster schema elements for the Flex2GO and Uitzendmaster product.
+      Author(s): Birdseyeview B.V.
+      Contact: info@birdseyeview.nl
+
+    </xsd:documentation>
+	</xsd:annotation>
+	<xsd:complexType name="UitzendmasterLocationType">
+		<xsd:sequence>
+			<xsd:element name="Code" type="xsd:integer"/>
+			<xsd:element name="Name" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+  <xsd:simpleType name="UitzendmasterFaseType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="1"/>
+      <xsd:enumeration value="2A"/>
+      <xsd:enumeration value="2B"/>
+      <xsd:enumeration value="3"/>
+      <xsd:enumeration value="4"/>
+      <xsd:enumeration value="A"/>
+      <xsd:enumeration value="B"/>
+      <xsd:enumeration value="C"/>
+      <xsd:enumeration value="Keten"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="UitzendmasterFunctionType">
+    <xsd:sequence>
+      <xsd:element name="Code" type="xsd:integer"/>
+      <xsd:element name="Name" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

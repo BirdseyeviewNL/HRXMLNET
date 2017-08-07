@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.nocore.nl/2010-10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" targetNamespace="http://www.nocore.nl/2010-10" elementFormDefault="qualified" version="2010-10">
+	<xsd:annotation>
+		<xsd:documentation>
+
+			Name: NocorePositionOpening.xsd
+			Purpose: Defines the additional Nocore schema elements for the Flex2GO and Nocore product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../CPO/Competencies.xsd" />
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../CPO/SharedStaffingModules.xsd" />
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../CPO/LicensesAndCertifications.xsd" />
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../CPO/EducationHistory.xsd" />
+  <xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../CPO/EntityIdType.xsd" />
+  <xsd:include schemaLocation="NocoreLocation.xsd"/>
+  <xsd:include schemaLocation="NocoreResume.xsd"/>
+	<xsd:element name="NocorePositionOpening" type="NocorePositionOpeningType"/>
+	<xsd:complexType name="NocorePositionOpeningType">
+		<xsd:sequence>
+      <xsd:element name="Urgence" type="xsd:string" minOccurs="0" />
+			<xsd:element name="EducationLevel" type="xsd:string" minOccurs="0" />
+			<xsd:element name="ProfessionalIntellectualAbility" type="xsd:string" minOccurs="0" />
+			<xsd:element name="RequiredExperience" type="xsd:int" minOccurs="0" />
+			<xsd:element name="HoursPerWeek" type="xsd:decimal" minOccurs="0" />
+			<xsd:element name="DaysPerWeek" type="xsd:decimal" minOccurs="0" />
+			<xsd:element name="MinRate" type="xsd:decimal" minOccurs="0" />
+			<xsd:element name="MaxRate" type="xsd:decimal" minOccurs="0" />
+			<xsd:element name="CustomerReference" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Availability" type="AvailibilityType" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="Qualifications" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="QualificationSummary" type="xsd:string" minOccurs="0"/>
+						<xsd:element ref="hr:Competency" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Languages" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="hr:Language" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="hr:LicensesAndCertifications" minOccurs="0"/>
+			<xsd:element name="RequiredEducation" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+					<xsd:element name="SchoolOrInstitution" maxOccurs="unbounded">
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="hr:SchoolOrInstitutionType"/>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+					</xsd:complexType>
+			</xsd:element>
+      <xsd:element name="Location" type="NocoreLocationType" />
+      <xsd:element name="Status" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Replies" minOccurs="0" maxOccurs="unbounded" type="NocorePositionOpeningReplyType" />
+    </xsd:sequence>
+	</xsd:complexType>
+  <xsd:complexType name="NocorePositionOpeningReplyType">
+    <xsd:sequence>
+      <xsd:element name="HumanResourceId" type="hr:EntityIdType" maxOccurs="unbounded" />
+      <xsd:element name="Status" type="xsd:string" />
+      <xsd:element name="Remark" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Reply" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Date" type="xsd:dateTime" />
+      <xsd:element name="Source" type="xsd:string" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

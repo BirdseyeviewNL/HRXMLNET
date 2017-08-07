@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.combil.nl/2013-04" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" xmlns:setu="http://ns.setu.nl/2008-01" targetNamespace="http://www.combil.nl/2013-04" elementFormDefault="qualified" version="2010-10">
+	<xsd:annotation>
+		<xsd:documentation>
+
+      Name: UitzendmasterStaffingOrganization.xsd
+      Purpose: Defines the additional StaffingOrganization schema elements for the Flex2GO and Uitzendmaster product.
+      Author(s): Birdseyeview B.V.
+      Contact: info@birdseyeview.nl
+
+    </xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.setu.nl/2008-01" schemaLocation="../../2008-01/AssignmentAdditionalNL.xsd" />
+	<xsd:import namespace="http://ns.setu.nl/2008-01" schemaLocation="../../2008-01/HumanResourceAdditionalNL.xsd" />
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../CPO/EntityIdType.xsd" />
+	<xsd:include schemaLocation="UitzendmasterLocation.xsd"/>
+	<xsd:element name="UitzendmasterStaffingOrganization" type="UitzendmasterStaffingOrganizationType"/>
+	<xsd:complexType name="UitzendmasterStaffingOrganizationType">
+		<xsd:sequence>
+			<xsd:element name="AccountManager" type="UitzendmasterAccountManagerType" minOccurs="0" />
+			<xsd:element name="VATNumber" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Location" type="UitzendmasterLocationType" />
+			<xsd:element name="Modified" type="xsd:dateTime" />
+      <xsd:element name="CostCenter" type="UitzendmasterCostCenterType" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="Contact" type="UitzendmasterContactType" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="UitzendmasterContactType">
+		<xsd:sequence>
+			<xsd:element name="ContactId" type="hr:EntityIdType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Initials" type="xsd:string" />
+			<xsd:element name="Sex" type="setu:SexType" />
+		</xsd:sequence>
+	</xsd:complexType>
+  <xsd:complexType name="UitzendmasterAccountManagerType">
+    <xsd:sequence>
+      <xsd:element name="Code" type="xsd:integer"/>
+      <xsd:element name="Name" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="UitzendmasterCostCenterType">
+    <xsd:sequence>
+      <xsd:element name="Code" type="xsd:integer" />
+      <xsd:element name="Name" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

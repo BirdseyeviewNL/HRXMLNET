@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.nocore.nl/2010-10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" xmlns:setu="http://ns.setu.nl/2008-01" targetNamespace="http://www.nocore.nl/2010-10" elementFormDefault="qualified" version="2010-10">
+	<xsd:annotation>
+		<xsd:documentation>
+
+			Name: NocoreAssignment.xsd
+			Purpose: Defines the additional Assignment schema elements for the Flex2GO and Nocore product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.setu.nl/2008-01" schemaLocation="../../2008-01/AssignmentAdditionalNL.xsd"/>
+  <xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../CPO/EntityIdType.xsd" />
+  <xsd:include schemaLocation="NocoreLocation.xsd"/>
+	<xsd:element name="NocoreAssignment" type="NocoreAssignmentType"/>
+	<xsd:complexType name="NocoreAssignmentType">
+		<xsd:sequence>
+			<!-- Intercedent -->
+			<xsd:element name="AccountManager" type="xsd:string" minOccurs="0" />
+			<!-- Nocore Locatie -->
+			<xsd:element name="Location" type="NocoreLocationType" />
+			<!-- ABU inschaling indien van toepassing -->
+			<xsd:element name="ABU" type="NocoreABUType" minOccurs="0" />
+			<!--Reserveringsmodel -->
+			<xsd:element name="ReservationModel" type="xsd:integer" />
+			<!-- Tariefmodel -->
+			<xsd:element name="RateModel" type="xsd:integer" />
+			<!-- Loonbedrijf -->
+			<xsd:element name="PaymentDivision" type="xsd:integer" />
+			<!-- Risicogroep -->
+			<xsd:element name="Riskgroup" type="xsd:integer" />
+			<!-- Inlenersbeloning toepassen -->
+			<xsd:element name="CustomerCSA" type="xsd:boolean" />
+			<!-- Kostenplaats -->
+			<xsd:element name="CostCenter" type="xsd:string" />
+			<!-- Factuuromschrijving -->
+			<xsd:element name="InvoiceDescription" type="xsd:string" />
+			<!-- Aantal uren per week -->
+			<xsd:element name="HoursPerWeek" type="xsd:decimal" />
+			<!-- Gearchiveerd -->
+			<xsd:element name="Archive" type="xsd:boolean" />
+			<!-- Fase -->
+			<xsd:element name="Fase" type="xsd:string"/>
+			<!-- Laatste update datum -->
+			<xsd:element name="Modified" type="xsd:dateTime" />
+
+			<xsd:element name="ParttimePercentage" type="xsd:int" minOccurs="0" />
+			<xsd:element name="PermanentContract" type="xsd:boolean" minOccurs="0" />
+			<xsd:element name="TermOfPayment" type="TermOfPaymentType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="NocoreABUType">
+		<xsd:sequence>
+			<xsd:element name="A" type="xsd:integer" />
+			<xsd:element name="B" type="xsd:integer" />
+			<xsd:element name="C" type="xsd:integer" />
+			<xsd:element name="Functiegroep" type="xsd:integer" />
+			<xsd:element name="Periodiek" type="xsd:integer" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TermOfPaymentType">
+		<xsd:sequence>
+			<xsd:element name="TermOfPaymentId" type="hr:EntityIdType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="InvoiceDate" type="xsd:dateTime" />
+			<xsd:element name="Description" type="xsd:string" />
+			<xsd:element name="Amount" type="xsd:decimal" />
+			<xsd:element name="AccountNumber" type="xsd:int" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

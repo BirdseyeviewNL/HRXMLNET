@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.combil.nl/2013-04" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" targetNamespace="http://www.combil.nl/2013-04" elementFormDefault="qualified" version="2013-04">
+	<xsd:annotation>
+		<xsd:documentation>
+
+      Name: UitzendmasterHumanResource.xsd
+      Purpose: Defines the additional humanresource schema elements for the Flex2GO and Uitzendmaster product.
+      Author(s): Birdseyeview B.V.
+      Contact: info@birdseyeview.nl
+
+    </xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../BankAccountInfo.xsd"/>
+	<xsd:include schemaLocation="UitzendmasterLocation.xsd"/>
+	<xsd:element name="UitzendmasterHumanResource" type="UitzendmasterHumanResourceType"/>
+	<xsd:simpleType name="UitzendmasterMaritalStatusType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Domestic Partner"/>
+			<!-- xsd:enumeration value="Registered Partner"/-->
+			<xsd:enumeration value="Married"/>
+			<xsd:enumeration value="Unmarried"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="UitzendmasterNationalityType">
+		<xsd:sequence>
+			<xsd:element name="GBACode" type="xsd:integer"/>
+			<xsd:element name="Name" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="UitzendmasterHumanResourceType">
+		<xsd:sequence>
+			<xsd:element name="SocialSecurityNumber" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Initials" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="BankAccountInfo" type="hr:BankAccountInfoType" />
+			<xsd:element name="Nationality" type="UitzendmasterNationalityType" />
+			<xsd:element name="Location" type="UitzendmasterLocationType" />
+			<xsd:element name="PlaceOfBirth" type="xsd:string" minOccurs ="0"/>
+			<xsd:element name="Status" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Fase" type="UitzendmasterFaseType" minOccurs="0" />
+			<xsd:element name="MaritalStatus" type="xsd:string" minOccurs="0" />
+			<xsd:element name="TaxReduction" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="Modified" type="xsd:dateTime" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

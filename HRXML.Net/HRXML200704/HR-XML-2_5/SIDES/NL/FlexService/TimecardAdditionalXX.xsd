@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="TimecardAdditionalXX"
+	targetNamespace="http://ns.hr-xml.org/2007-04-15"
+	elementFormDefault="qualified"
+    xmlns="http://ns.hr-xml.org/2007-04-15"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+>
+	<xsd:annotation>
+		<xsd:documentation>
+
+			Name: TimecardAdditionalXX.xsd
+			Purpose: Defines the additional TimecardAdditionalXX schema elements for the Flex2GO and FlexService product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="TimecardAdditionalXX" type="TimecardAdditionalXXType" />
+	<xsd:complexType name="TimecardAdditionalXXType">
+		<xsd:sequence>
+			<xsd:element name="Owner" type="xsd:string" />
+			<xsd:element name="Remark" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

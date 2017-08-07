@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.flex2go.nl/FlexGoTypes"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.flex2go.nl/FlexGoTypes"
+			elementFormDefault="qualified"
+			version="2015-12">
+  <xsd:annotation>
+    <xsd:documentation>
+
+      Name: FlexGoTypes.xsd
+      Purpose: Defines the additional humanresource schema elements for the Flex-go and Flex2Go product.
+      Author(s): Birdseyeview B.V.
+      Contact: info@birdseyeview.nl
+
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:complexType name="FlexGoListType">
+    <xsd:sequence>
+      <xsd:element name="Naam" type="xsd:string" minOccurs="0" />
+      <xsd:element name="BedrijfCode" type="xsd:int" minOccurs="0" />
+      <xsd:element name="Links" type="FlexGoLinkType" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FlexGoLinkType">
+    <xsd:sequence>
+      <xsd:element name="Id" type="xsd:int" minOccurs="0" />
+      <xsd:element name="ExternId" type="xsd:int" minOccurs="0" />
+      <xsd:element name="Naam" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Deleted" type="xsd:boolean" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FlexGoDataType">
+    <xsd:sequence>
+      <xsd:element name="Id" type="xsd:int" minOccurs="0" />
+      <xsd:element name="Naam" type="xsd:string" minOccurs="0" />
+      <xsd:element name="DataType" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Values" type="FlexGoDataTypeWaarde" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="FlexGoDataTypeWaarde">
+    <xsd:sequence>
+      <xsd:element name="Value" type="xsd:string" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="FlexGoNotitieType">
+    <xsd:sequence>
+      
+      <xsd:element name="GroepsNotitieId" type="xsd:int" minOccurs="0" />
+      <xsd:element name="NotitieId" type="xsd:int" minOccurs="0" />
+      <xsd:element name="NotitieSoortId" type="xsd:int" minOccurs="0" />
+      <xsd:element name="NotitieDatum" type="xsd:dateTime" minOccurs="0" />
+      <xsd:element name="Onderwerp" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Omschrijving" type="xsd:string" minOccurs="0" />
+
+      <xsd:element name="Links" type="FlexGoLinkType" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="FlexGoWijziging" type="FlexGoWijzigingType" minOccurs="0" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FlexGoWijzigingType">
+    <xsd:sequence>
+      <xsd:element name="GemaaktDatum" type="xsd:dateTime" minOccurs="0" />
+      <xsd:element name="GewijzigdDatum" type="xsd:dateTime" minOccurs="0" />
+    
+      <xsd:element name="GemaaktDoor" type="xsd:string" minOccurs="0" />
+      <xsd:element name="GewijzigdDoor" type="xsd:string" minOccurs="0" />
+
+      <xsd:element name="GemaaktDoorId" type="xsd:int" minOccurs="0" />
+      <xsd:element name="GewijzigdDoorId" type="xsd:int" minOccurs="0" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+</xsd:schema>

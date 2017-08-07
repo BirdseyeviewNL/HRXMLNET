@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.combil.nl/2013-04" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" xmlns:setu="http://ns.setu.nl/2008-01" targetNamespace="http://www.combil.nl/2013-04" elementFormDefault="qualified" version="2013-04">
+	<xsd:annotation>
+		<xsd:documentation>
+
+			Name: UitzendmasterAssignment.xsd
+			Purpose: Defines the additional Assignment schema elements for the Flex2GO and Uitzendmaster product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.setu.nl/2008-01" schemaLocation="../../2008-01/AssignmentAdditionalNL.xsd"/>
+  <xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../CPO/EntityIdType.xsd" />
+  <xsd:include schemaLocation="UitzendmasterLocation.xsd"/>
+	<xsd:element name="UitzendmasterAssignment" type="UitzendmasterAssignmentType"/>
+	<xsd:complexType name="UitzendmasterAssignmentType">
+		<xsd:sequence>
+			<xsd:element name="Location" type="UitzendmasterLocationType" />
+      <xsd:element name="Fase" type="UitzendmasterFaseType" minOccurs="0" />
+      <xsd:element name="Function" type="UitzendmasterFunctionType" minOccurs="0" />
+      <xsd:element name="PaymentPeriod" type="xsd:string" minOccurs ="0" />
+      <xsd:element name="PremiumRiskgroup" type="xsd:string" />
+			<xsd:element name="CustomerCSA" type="xsd:boolean" />
+			<xsd:element name="CostCenter" type="xsd:string" />
+      <xsd:element name="TaxReduction" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="Modified" type="xsd:dateTime" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

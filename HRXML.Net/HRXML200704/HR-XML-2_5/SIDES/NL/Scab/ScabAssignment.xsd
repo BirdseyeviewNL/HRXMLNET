@@ -1,0 +1,39 @@
+﻿<xsd:schema xmlns="http://www.scabadvies.nl/2016-05"
+			xmlns:hr="http://ns.hr-xml.org/2007-04-15"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.scabadvies.nl/2016-05"
+			elementFormDefault="qualified"
+			version="2016-05">
+  <xsd:annotation>
+    <xsd:documentation>
+
+      Name: ScabHumanResource.xsd
+      Purpose: Defines the additional humanresource schema elements for the Scab and Flex2GO product.
+      Author(s): Birdseyeview B.V.
+      Contact: info@birdseyeview.nl
+
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:import namespace="http://ns.setu.nl/2008-01" schemaLocation="../2008-01/AssignmentAdditionalNL.xsd"/>
+
+  <xsd:element name="ScabAssignment" type="ScabAssignmentType"/>
+  <xsd:complexType name="ScabAssignmentType">
+    <xsd:sequence>
+      <xsd:element name="CollectiveSocialAgreementId" type="xsd:int" minOccurs="0" />
+      <xsd:element name="CollectiveSocialAgreementDescription" type="xsd:string" minOccurs="0" />
+      <xsd:element name="RiskGroup" type="xsd:string" minOccurs="0" />
+      <xsd:element name="FunctionGroup" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Function" type="xsd:string" minOccurs="0" />
+      <xsd:element name="FunctionDescription" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Table" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Grade" type="xsd:string" minOccurs="0" />
+      <xsd:element name="CostCenterId" type="xsd:string" minOccurs ="0"/>
+      <xsd:element name="CostCenterDescription" type="xsd:string" minOccurs ="0"/>
+      <xsd:element name="LastContractEndDate" type="xsd:date" minOccurs="0" />
+      <xsd:element name="NumberOfContracts" type="xsd:int"  minOccurs="0"/>
+      <xsd:element name="WeeksWorked" type="xsd:int"  minOccurs="0"/>
+      <xsd:element name="Continuance" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="Modified" type="xsd:dateTime" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

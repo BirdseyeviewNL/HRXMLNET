@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.birdseyeview.nl/Flexgate/2011-05" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" targetNamespace="http://www.birdseyeview.nl/Flexgate/2011-05" elementFormDefault="qualified" version="2011-05">
+	<xsd:annotation>
+		<xsd:documentation>
+
+			Name: FlexGateHumanResource.xsd
+			Purpose: Defines the additional humanresource schema elements for the Flex2GO and FlexGate product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../BankAccountInfo.xsd"/>
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../CPO/ISOUtilities.xsd"/>
+
+
+	<xsd:element name="FlexGateHumanResource" type="FlexGateHumanResourceType"/>
+
+	<xsd:simpleType name="MaritalStatusType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Ongehuwd"/>
+			<xsd:enumeration value="Gehuwd"/>
+			<xsd:enumeration value="Duurzaam gescheiden"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="FaseType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="0"/>
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+			<xsd:enumeration value="3"/>
+			<xsd:enumeration value="4"/>
+			<xsd:enumeration value="5"/>
+			<xsd:enumeration value="A1"/>
+			<xsd:enumeration value="A2"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="Z"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="CountryType">
+		<xsd:sequence>
+			<xsd:element name="GBACode" type="xsd:string"/>
+			<xsd:element name="Name" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="FlexGateHumanResourceType">
+		<xsd:sequence>
+			<xsd:element name="SocialSecurityNumber" type="xsd:int" minOccurs="0" />
+			<xsd:element name="Initials" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="BankAccountInfo" type="hr:BankAccountInfoType" />
+			<xsd:element name="Nationality" type="xsd:int" />
+			<xsd:element name="CountryOfBirth" type="hr:CountryCodeType" />
+			<xsd:element name="MaritalStatus" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Modified" type="xsd:dateTime" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>

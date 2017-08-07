@@ -1,0 +1,1307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3CA8C8F-86E4-4100-811E-085A197F5E4B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HRXML.Net</RootNamespace>
+    <AssemblyName>HRXML.Net</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Birdseyeview.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentCancelRequest.cs">
+      <DependentUpon>AssessmentCancelRequest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentCancelRequest.designer.cs">
+      <DependentUpon>AssessmentCancelRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentCatalog.cs">
+      <DependentUpon>AssessmentCatalog.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentCatalog.designer.cs">
+      <DependentUpon>AssessmentCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentCatalogQuery.cs">
+      <DependentUpon>AssessmentCatalogQuery.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentCatalogQuery.designer.cs">
+      <DependentUpon>AssessmentCatalogQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentOrderAcknowledgement.cs">
+      <DependentUpon>AssessmentOrderAcknowledgement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentOrderAcknowledgement.designer.cs">
+      <DependentUpon>AssessmentOrderAcknowledgement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentOrderRequest.cs">
+      <DependentUpon>AssessmentOrderRequest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentOrderRequest.designer.cs">
+      <DependentUpon>AssessmentOrderRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentResult.cs">
+      <DependentUpon>AssessmentResult.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentResult.designer.cs">
+      <DependentUpon>AssessmentResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentStatusRequest.cs">
+      <DependentUpon>AssessmentStatusRequest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentStatusRequest.designer.cs">
+      <DependentUpon>AssessmentStatusRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentTypes.cs">
+      <DependentUpon>AssessmentTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentTypes.designer.cs">
+      <DependentUpon>AssessmentTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\Competencies.cs">
+      <DependentUpon>Competencies.xsd</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\Competencies.designer.cs">
+      <DependentUpon>Competencies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\CompetencyTypes.cs">
+      <DependentUpon>CompetencyTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\CompetencyTypes.Designer.cs">
+      <DependentUpon>CompetencyTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\SupportingMaterials.cs">
+      <DependentUpon>SupportingMaterials.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\SupportingMaterials.designer.cs">
+      <DependentUpon>SupportingMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\Enrollment.cs">
+      <DependentUpon>Enrollment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\Enrollment.designer.cs">
+      <DependentUpon>Enrollment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\EnrollmentTypes.cs">
+      <DependentUpon>EnrollmentTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\EnrollmentTypes.designer.cs">
+      <DependentUpon>EnrollmentTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\Localizations.cs">
+      <DependentUpon>Localizations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\Localizations.designer.cs">
+      <DependentUpon>Localizations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\US\USLocalizations.cs">
+      <DependentUpon>USLocalizations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\US\USLocalizations.designer.cs">
+      <DependentUpon>USLocalizations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\US\USRateBasedCoverage.cs">
+      <DependentUpon>USRateBasedCoverage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\US\USRateBasedCoverage.designer.cs">
+      <DependentUpon>USRateBasedCoverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\US\USSpendingAccountCoverage.cs">
+      <DependentUpon>USSpendingAccountCoverage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\US\USSpendingAccountCoverage.designer.cs">
+      <DependentUpon>USSpendingAccountCoverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\US\USTierCoverage.cs">
+      <DependentUpon>USTierCoverage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Enrollment\US\USTierCoverage.designer.cs">
+      <DependentUpon>USTierCoverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\AffiliationTypes.cs">
+      <DependentUpon>AffiliationTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\AffiliationTypes.designer.cs">
+      <DependentUpon>AffiliationTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\EmployeeInfoTypes.cs">
+      <DependentUpon>EmployeeInfoTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\EmployeeInfoTypes.designer.cs">
+      <DependentUpon>EmployeeInfoTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\EmploymentInfoTypes.cs">
+      <DependentUpon>EmploymentInfoTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\EmploymentInfoTypes.designer.cs">
+      <DependentUpon>EmploymentInfoTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\IndicativeBatch.cs">
+      <DependentUpon>IndicativeBatch.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\IndicativeBatch.designer.cs">
+      <DependentUpon>IndicativeBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\IndicativeData.cs">
+      <DependentUpon>IndicativeData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\IndicativeData.designer.cs">
+      <DependentUpon>IndicativeData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\IndicativeReusableTypes.cs">
+      <DependentUpon>IndicativeReusableTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\IndicativeReusableTypes.designer.cs">
+      <DependentUpon>IndicativeReusableTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\JobInfoTypes.cs">
+      <DependentUpon>JobInfoTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\JobInfoTypes.designer.cs">
+      <DependentUpon>JobInfoTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\OrganizationalInfoTypes.cs">
+      <DependentUpon>OrganizationalInfoTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\OrganizationalInfoTypes.designer.cs">
+      <DependentUpon>OrganizationalInfoTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\PersonalInfoTypes.cs">
+      <DependentUpon>PersonalInfoTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\PersonalInfoTypes.designer.cs">
+      <DependentUpon>PersonalInfoTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\US\USLocalizations.cs">
+      <DependentUpon>USLocalizations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Indicative\US\USLocalizations.designer.cs">
+      <DependentUpon>USLocalizations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Metrics\MetricsInterchange.cs">
+      <DependentUpon>MetricsInterchange.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Metrics\MetricsInterchange.designer.cs">
+      <DependentUpon>MetricsInterchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\NewHire\NewHire.cs">
+      <DependentUpon>NewHire.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\NewHire\NewHire.designer.cs">
+      <DependentUpon>NewHire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Payroll\CalculatedValues.cs">
+      <DependentUpon>CalculatedValues.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Payroll\CalculatedValues.designer.cs">
+      <DependentUpon>CalculatedValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Payroll\Localizations.cs">
+      <DependentUpon>Localizations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Payroll\Localizations.designer.cs">
+      <DependentUpon>Localizations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Payroll\PayrollBenefitContributions.cs">
+      <DependentUpon>PayrollBenefitContributions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Payroll\PayrollBenefitContributions.designer.cs">
+      <DependentUpon>PayrollBenefitContributions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Payroll\PayrollInstructions.cs">
+      <DependentUpon>PayrollInstructions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Payroll\PayrollInstructions.designer.cs">
+      <DependentUpon>PayrollInstructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Payroll\TransactionCodes.cs">
+      <DependentUpon>TransactionCodes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Payroll\TransactionCodes.designer.cs">
+      <DependentUpon>TransactionCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Payroll\US\USLocalizations.cs">
+      <DependentUpon>USLocalizations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Payroll\US\USLocalizations.designer.cs">
+      <DependentUpon>USLocalizations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Screening\US\Screenings.cs">
+      <DependentUpon>Screenings.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Screening\US\Screenings.designer.cs">
+      <DependentUpon>Screenings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Screening\US\ScreeningTypes.cs">
+      <DependentUpon>ScreeningTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\Screening\US\ScreeningTypes.designer.cs">
+      <DependentUpon>ScreeningTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\Candidate.cs">
+      <DependentUpon>Candidate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\Candidate.designer.cs">
+      <DependentUpon>Candidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\MatchingTypes.cs">
+      <DependentUpon>MatchingTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\MatchingTypes.designer.cs">
+      <DependentUpon>MatchingTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\PositionOpening.cs">
+      <DependentUpon>PositionOpening.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\PositionOpening.Designer.cs">
+      <DependentUpon>PositionOpening.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\PrehireRemunerationPackage.cs">
+      <DependentUpon>PrehireRemunerationPackage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\PrehireRemunerationPackage.designer.cs">
+      <DependentUpon>PrehireRemunerationPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\SearchTypes.cs">
+      <DependentUpon>SearchTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\SearchTypes.designer.cs">
+      <DependentUpon>SearchTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\SEPPhysicalLocation.cs">
+      <DependentUpon>SEPPhysicalLocation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\SEPPhysicalLocation.designer.cs">
+      <DependentUpon>SEPPhysicalLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\US\USLocalizations.cs">
+      <DependentUpon>USLocalizations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\US\USLocalizations.designer.cs">
+      <DependentUpon>USLocalizations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\2007-01\AssignmentAdditionalNL.cs">
+      <DependentUpon>AssignmentAdditionalNL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\2007-01\AssignmentAdditionalNL.designer.cs">
+      <DependentUpon>AssignmentAdditionalNL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\2007-01\HumanResourceAdditionalNL.cs">
+      <DependentUpon>HumanResourceAdditionalNL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\2007-01\HumanResourceAdditionalNL.designer.cs">
+      <DependentUpon>HumanResourceAdditionalNL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Afas\2013-10\AfasAssignment.cs">
+      <DependentUpon>AfasAssignment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Afas\2013-10\AfasAssignment.designer.cs">
+      <DependentUpon>AfasAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\EasyFlex\2015-05\EasyFlex.cs">
+      <DependentUpon>EasyFlex.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\EasyFlex\2015-05\EasyFlex.Designer.cs">
+      <DependentUpon>EasyFlex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Document.cs">
+      <DependentUpon>Document.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Document.designer.cs">
+      <DependentUpon>Document.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Flex2GoAssignment.cs">
+      <DependentUpon>Flex2GoAssignment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Flex2GoAssignment.Designer.cs">
+      <DependentUpon>Flex2GoAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flexgate\2011-05\FlexGateAssignment.cs">
+      <DependentUpon>FlexGateAssignment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flexgate\2011-05\FlexGateAssignment.designer.cs">
+      <DependentUpon>FlexGateAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flexgate\2011-05\FlexGateHumanResource.cs">
+      <DependentUpon>FlexGateHumanResource.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flexgate\2011-05\FlexGateHumanResource.designer.cs">
+      <DependentUpon>FlexGateHumanResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flexgate\2011-05\FlexGateStaffingOrganization.cs">
+      <DependentUpon>FlexGateStaffingOrganization.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flexgate\2011-05\FlexGateStaffingOrganization.designer.cs">
+      <DependentUpon>FlexGateStaffingOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexGo\FlexGoAS.designer.cs">
+      <DependentUpon>FlexGoAS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexGo\FlexGoHR.designer.cs">
+      <DependentUpon>FlexGoHR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexGo\FlexGoSO.designer.cs">
+      <DependentUpon>FlexGoSo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexGo\FlexGoTypes.designer.cs">
+      <DependentUpon>FlexGoTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\AssignmentAdditionalMP.cs">
+      <DependentUpon>AssignmentAdditionalMP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\AssignmentAdditionalMP.designer.cs">
+      <DependentUpon>AssignmentAdditionalMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\AssignmentAdditionalModel.cs">
+      <DependentUpon>AssignmentAdditionalModel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\AssignmentAdditionalModel.designer.cs">
+      <DependentUpon>AssignmentAdditionalModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Flex2GoStaffingOrganization.cs">
+      <DependentUpon>Flex2GoStaffingOrganization.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Flex2GoStaffingOrganization.designer.cs">
+      <DependentUpon>Flex2GoStaffingOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\HumanResourceAdditionalMP.cs">
+      <DependentUpon>HumanResourceAdditionalMP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\HumanResourceAdditionalMP.designer.cs">
+      <DependentUpon>HumanResourceAdditionalMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\HumanResourceAdditionalXX.cs">
+      <DependentUpon>HumanResourceAdditionalXX.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\HumanResourceAdditionalXX.designer.cs">
+      <DependentUpon>HumanResourceAdditionalXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Flex2GoHumanResource.cs">
+      <DependentUpon>Flex2GoHumanResource.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Flex2GoHumanResource.designer.cs">
+      <DependentUpon>Flex2GoHumanResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\StaffingOrganizationAdditionalXX.cs">
+      <DependentUpon>StaffingOrganizationAdditionalXX.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\StaffingOrganizationAdditionalXX.designer.cs">
+      <DependentUpon>StaffingOrganizationAdditionalXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\TimecardAdditionalMP.cs">
+      <DependentUpon>TimecardAdditionalMP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\TimecardAdditionalMP.designer.cs">
+      <DependentUpon>TimecardAdditionalMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\TimecardAdditionalXX.cs">
+      <DependentUpon>TimecardAdditionalXX.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\TimecardAdditionalXX.designer.cs">
+      <DependentUpon>TimecardAdditionalXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreAssignment.cs">
+      <DependentUpon>NocoreAssignment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreAssignment.designer.cs">
+      <DependentUpon>NocoreAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreBase.cs">
+      <DependentUpon>NocoreBase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreBase.designer.cs">
+      <DependentUpon>NocoreBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocorePositionOpening.cs">
+      <DependentUpon>NocorePositionOpening.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocorePositionOpening.Designer.cs">
+      <DependentUpon>NocorePositionOpening.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreResume.cs">
+      <DependentUpon>NocoreResume.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreResume.designer.cs">
+      <DependentUpon>NocoreResume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Scab\ScabAssignment.cs">
+      <DependentUpon>ScabAssignment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Scab\ScabAssignment.Designer.cs">
+      <DependentUpon>ScabAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Scab\ScabHumanResource.cs">
+      <DependentUpon>ScabHumanResource.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Scab\ScabHumanResource.designer.cs">
+      <DependentUpon>ScabHumanResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Uitzendmaster\2013-04\UitzendmasterAssignment.cs">
+      <DependentUpon>UitzendmasterAssignment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Uitzendmaster\2013-04\UitzendmasterAssignment.designer.cs">
+      <DependentUpon>UitzendmasterAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Uitzendmaster\2013-04\UitzendmasterStaffingOrganization.cs">
+      <DependentUpon>UitzendmasterStaffingOrganization.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Uitzendmaster\2013-04\UitzendmasterStaffingOrganization.designer.cs">
+      <DependentUpon>UitzendmasterStaffingOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Uitzendmaster\2013-04\UitzendmasterHumanResource.cs">
+      <DependentUpon>UitzendmasterHumanResource.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Uitzendmaster\2013-04\UitzendmasterHumanResource.designer.cs">
+      <DependentUpon>UitzendmasterHumanResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Uitzendmaster\2013-04\UitzendmasterLocation.cs">
+      <DependentUpon>UitzendmasterLocation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Uitzendmaster\2013-04\UitzendmasterLocation.designer.cs">
+      <DependentUpon>UitzendmasterLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\TimeCard\TimeCardConfiguration.cs">
+      <DependentUpon>TimeCardConfiguration.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\TimeCard\TimeCardConfiguration.designer.cs">
+      <DependentUpon>TimeCardConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\W3C\xmldsig-core-schema.cs">
+      <DependentUpon>xmldsig-core-schema.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\W3C\xmldsig-core-schema.designer.cs">
+      <DependentUpon>xmldsig-core-schema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXMLBehaviorExtensionElement.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\ApplicationAcknowledgement.cs">
+      <DependentUpon>ApplicationAcknowledgement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\ApplicationAcknowledgement.designer.cs">
+      <DependentUpon>ApplicationAcknowledgement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\ContactMethod.cs">
+      <DependentUpon>ContactMethod.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\ContactMethod.Designer.cs">
+      <DependentUpon>ContactMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\EducationHistory.cs">
+      <DependentUpon>EducationHistory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\EducationHistory.designer.cs">
+      <DependentUpon>EducationHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\EntityIdType.cs">
+      <DependentUpon>EntityIdType.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\EntityIdType.Designer.cs">
+      <DependentUpon>EntityIdType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\IdentifierTypes.cs">
+      <DependentUpon>IdentifierTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\IdentifierTypes.Designer.cs">
+      <DependentUpon>IdentifierTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\ISOUtilities.cs">
+      <DependentUpon>ISOUtilities.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\ISOUtilities.Designer.cs">
+      <DependentUpon>ISOUtilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\Organization.cs">
+      <DependentUpon>Organization.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\Organization.Designer.cs">
+      <DependentUpon>Organization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\PersonName.cs">
+      <DependentUpon>PersonName.xsd</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\PersonName.Designer.cs">
+      <DependentUpon>PersonName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\PostalAddress.cs">
+      <DependentUpon>PostalAddress.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\PostalAddress.Designer.cs">
+      <DependentUpon>PostalAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\PublicationHistory.cs">
+      <DependentUpon>PublicationHistory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\PublicationHistory.designer.cs">
+      <DependentUpon>PublicationHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\RoundingTypes.cs">
+      <DependentUpon>RoundingTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\RoundingTypes.Designer.cs">
+      <DependentUpon>RoundingTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\SharedStaffingModules.cs">
+      <DependentUpon>SharedStaffingModules.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\SharedStaffingModules.designer.cs">
+      <DependentUpon>SharedStaffingModules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\TaxonomyTypes.cs">
+      <DependentUpon>TaxonomyTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\TaxonomyTypes.designer.cs">
+      <DependentUpon>TaxonomyTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\TelcomNumber.cs">
+      <DependentUpon>TelcomNumber.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\TelcomNumber.Designer.cs">
+      <DependentUpon>TelcomNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\UserArea.cs">
+      <DependentUpon>UserArea.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\UserArea.Designer.cs">
+      <DependentUpon>UserArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\WorkSite.cs">
+      <DependentUpon>WorkSite.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\CPO\WorkSite.Designer.cs">
+      <DependentUpon>WorkSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\ResumeAdditionalItems.cs">
+      <DependentUpon>ResumeAdditionalItems.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SEP\ResumeAdditionalItems.designer.cs">
+      <DependentUpon>ResumeAdditionalItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\Assignment.cs">
+      <DependentUpon>Assignment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\Assignment.Designer.cs">
+      <DependentUpon>Assignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\BankAccountInfo.cs">
+      <DependentUpon>BankAccountInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\BankAccountInfo.designer.cs">
+      <DependentUpon>BankAccountInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\ContactInfo.cs">
+      <DependentUpon>ContactInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\ContactInfo.Designer.cs">
+      <DependentUpon>ContactInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\CustomerReportingRequirements.cs">
+      <DependentUpon>CustomerReportingRequirements.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\CustomerReportingRequirements.Designer.cs">
+      <DependentUpon>CustomerReportingRequirements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\FR\FRLocalizations.cs">
+      <DependentUpon>FRLocalizations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\FR\FRLocalizations.Designer.cs">
+      <DependentUpon>FRLocalizations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\HumanResource.cs">
+      <DependentUpon>HumanResource.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\HumanResource.designer.cs">
+      <DependentUpon>HumanResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\Invoice.cs">
+      <DependentUpon>Invoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\Invoice.designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\JP\JPLocalizations.cs">
+      <DependentUpon>JPLocalizations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\JP\JPLocalizations.Designer.cs">
+      <DependentUpon>JPLocalizations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\Localizations.cs">
+      <DependentUpon>Localizations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\Localizations.Designer.cs">
+      <DependentUpon>Localizations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\2008-01\AssignmentAdditionalNL.cs">
+      <DependentUpon>AssignmentAdditionalNL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\2008-01\AssignmentAdditionalNL.Designer.cs">
+      <DependentUpon>AssignmentAdditionalNL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\2008-01\HumanResourceAdditionalNL.cs">
+      <DependentUpon>HumanResourceAdditionalNL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\2008-01\HumanResourceAdditionalNL.designer.cs">
+      <DependentUpon>HumanResourceAdditionalNL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreLocation.cs">
+      <DependentUpon>NocoreLocation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreLocation.designer.cs">
+      <DependentUpon>NocoreLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreStaffingOrganization.cs">
+      <DependentUpon>NocoreStaffingOrganization.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreStaffingOrganization.designer.cs">
+      <DependentUpon>NocoreStaffingOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreHumanResource.cs">
+      <DependentUpon>NocoreHumanResource.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreHumanResource.designer.cs">
+      <DependentUpon>NocoreHumanResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\Rates.cs">
+      <DependentUpon>Rates.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\Rates.Designer.cs">
+      <DependentUpon>Rates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\StaffingOrder.cs">
+      <DependentUpon>StaffingOrder.xsd</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\StaffingOrder.Designer.cs">
+      <DependentUpon>StaffingOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\StaffingOrganization.cs">
+      <DependentUpon>StaffingOrganization.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\StaffingOrganization.Designer.cs">
+      <DependentUpon>StaffingOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\StaffingPosition.cs">
+      <DependentUpon>StaffingPosition.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\StaffingPosition.Designer.cs">
+      <DependentUpon>StaffingPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\StaffingShift.cs">
+      <DependentUpon>StaffingShift.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\StaffingShift.Designer.cs">
+      <DependentUpon>StaffingShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\StaffingWorkSiteEnvironment.cs">
+      <DependentUpon>StaffingWorkSiteEnvironment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\StaffingWorkSiteEnvironment.Designer.cs">
+      <DependentUpon>StaffingWorkSiteEnvironment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\TimeCardAdditionalData.cs">
+      <DependentUpon>TimeCardAdditionalData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\TimeCardAdditionalData.designer.cs">
+      <DependentUpon>TimeCardAdditionalData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\TimeCard\TimeCard.cs">
+      <DependentUpon>TimeCard.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\TimeCard\TimeCard.Designer.cs">
+      <DependentUpon>TimeCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRXMLMessageInspector.cs" />
+    <Compile Include="SchemaValidationBehavior.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\Competencies.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\ContactMethod.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\DateTimeDataTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\EducationHistory.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\EntityIdType.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\Frequencies.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\IdentifierTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\ISOUtilities.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\OnlineAddress.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\Organization.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\PersonName.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\PostalAddress.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\PublicationHistory.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\RoundingTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\SharedStaffingModules.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\TaxonomyTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\TelcomNumber.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\UserArea.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\WorkSite.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\xStringPatternExtensionType.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SEP\Resume.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SEP\ResumeAdditionalItems.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\Assignment.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\BankAccountInfo.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\ContactInfo.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\CustomerReportingRequirements.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\Acknowledgement.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\Cancel.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\CompetencyTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\DemographicDetail.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\EmploymentHistory.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\FlexibleDates.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\JobHeader.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\LicensesAndCertifications.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\MilitaryHistory.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\PatentHistory.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\PersonDescriptors.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\PhysicalLocation.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\PositionHeader.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\Retrieve.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\SpeakingEventsHistory.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\SupportingMaterials.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\FR\FRLocalizations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\HumanResource.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\JP\JPLocalizations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\Localizations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\2008-01\AssignmentAdditionalNL.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\2008-01\HumanResourceAdditionalNL.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\Rates.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\StaffingOrder.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\StaffingOrganization.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\StaffingPosition.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\StaffingShift.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\StaffingWorkSiteEnvironment.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\TimeCard\TimeCard.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\W3C\xenc-schema.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\W3C\xml.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\W3C\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HRXML200704\HR-XML-2_5\W3C\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\ResourceScreening.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\StaffingAction.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\StaffingContactType.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\Invoice.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\StaffingWorkSite.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\TimeCardAdditionalData.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\StaffingPositionHeader.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\ApplicationAcknowledgement.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HRXML200704\DublinCore\simpledc20021212.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreHumanResource.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreStaffingOrganization.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreLocation.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreAssignment.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Birdseyeview.snk" />
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flexgate\2011-05\FlexGateAssignment.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flexgate\2011-05\FlexGateHumanResource.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flexgate\2011-05\FlexGateStaffingOrganization.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreBase.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocoreResume.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentCancelRequest.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentCatalog.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentCatalogQuery.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentOrderAcknowledgement.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentOrderRequest.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentResult.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentStatusRequest.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Assessment\AssessmentTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\CPO\US\USLocalizations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Enrollment\Enrollment.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Enrollment\EnrollmentTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Enrollment\Localizations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Enrollment\US\USLocalizations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Enrollment\US\USRateBasedCoverage.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Enrollment\US\USSpendingAccountCoverage.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Enrollment\US\USTierCoverage.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Indicative\AffiliationTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Indicative\EmployeeInfoTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Indicative\EmploymentInfoTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Indicative\IndicativeBatch.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Indicative\IndicativeData.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Indicative\IndicativeReusableTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Indicative\JobInfoTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Indicative\Localizations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Indicative\OrganizationalInfoTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Indicative\PersonalInfoTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Indicative\RemunerationInfoTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Indicative\US\USLocalizations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Metrics\MetricsInterchange.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\NewHire\NewHire.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Payroll\CalculatedValues.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Payroll\Localizations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Payroll\PayrollBenefitContributions.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Payroll\PayrollInstructions.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Payroll\TransactionCodes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Payroll\US\USLocalizations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Screening\US\BackgroundCheck.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Screening\US\BackgroundCheckStatusRequest.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Screening\US\BackgroundReports.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Screening\US\Credit.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Screening\US\Example_PersonalDataExtensions.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Screening\US\Screenings.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Screening\US\ScreeningTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SEP\Candidate.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SEP\DE\DELocalizations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SEP\Localizations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SEP\MatchingTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SEP\PositionOpening.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SEP\PrehireRemunerationPackage.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SEP\SearchTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SEP\SEPPhysicalLocation.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SEP\US\USLocalizations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\ExerciseConfirmation.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\ExerciseRequest.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\Grant.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\RemoveExerciseConfirmations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\RemoveExerciseRequests.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\RemoveGrants.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\RemoveStockDeposits.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\RemoveStockPlanParticipants.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\RemoveStockPlans.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\RemoveStockSaleConfirmations.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\StockDeposit.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\StockPlan.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\StockPlanParticipant.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\StockPurchasePlanCoverage.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\Stock\StockSaleConfirmation.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\TimeCard\TimeCardConfiguration.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Nocore\2010-10\NocorePositionOpening.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\2007-01\AssignmentAdditionalNL.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\2007-01\HumanResourceAdditionalNL.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\HumanResourceAdditionalXX.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\AssignmentAdditionalMP.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\StaffingOrganizationAdditionalXX.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\TimecardAdditionalMP.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\TimecardAdditionalXX.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Document.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Flex2GoHumanResource.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\HumanResourceAdditionalMP.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Flex2GoStaffingOrganization.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexService\AssignmentAdditionalModel.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Uitzendmaster\2013-04\UitzendmasterHumanResource.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Uitzendmaster\2013-04\UitzendmasterLocation.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Uitzendmaster\2013-04\UitzendmasterStaffingOrganization.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Uitzendmaster\2013-04\UitzendmasterAssignment.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Afas\2013-10\AfasAssignment.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\EasyFlex\2015-05\EasyFlex.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexGo\FlexGoHR.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexGo\FlexGoTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexGo\FlexGoSO.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\FlexGo\FlexGoAS.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Flex2GoAssignment.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Scab\ScabHumanResource.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Scab\ScabAssignment.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.nocore.nl/2010-10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" targetNamespace="http://www.nocore.nl/2010-10" elementFormDefault="qualified" version="2010-10">
+	<xsd:annotation>
+		<xsd:documentation>
+
+			Name: NocoreHumanResource.xsd
+			Purpose: Defines the additional humanresource schema elements for the Flex2GO and Nocore product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../BankAccountInfo.xsd"/>
+	<xsd:include schemaLocation="NocoreLocation.xsd"/>
+	<xsd:element name="NocoreHumanResource" type="NocoreHumanResourceType"/>
+	<xsd:simpleType name="EmployeeStatusType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="candidate"/>
+			<xsd:enumeration value="flex"/>
+			<xsd:enumeration value="external"/>
+			<xsd:enumeration value="departed"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="MaritalStatusType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Domestic Partner"/>
+			<xsd:enumeration value="Registered Partner"/>
+			<xsd:enumeration value="Married"/>
+			<xsd:enumeration value="Unmarried"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="FaseType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2A"/>
+			<xsd:enumeration value="2B"/>
+			<xsd:enumeration value="3"/>
+			<xsd:enumeration value="4"/>
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="Keten"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="FasePeriodType">
+		<xsd:sequence>
+			<xsd:element name="Fase" type="xsd:string"/>
+			<xsd:element name="From" type="xsd:date" />
+			<xsd:element name="To" type="xsd:date" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="NationalityType">
+		<xsd:sequence>
+			<xsd:element name="GBACode" type="xsd:string"/>
+			<xsd:element name="Name" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="NocoreHumanResourceType">
+		<xsd:sequence>
+			<xsd:element name="AccountManager" type="xsd:string" minOccurs="0" />
+			<xsd:element name="SocialSecurityNumber" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Initials" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="BankAccountInfo" type="hr:BankAccountInfoType" />
+			<xsd:element name="Nationality" type="NationalityType" />
+			<xsd:element name="Location" type="NocoreLocationType" />
+			<xsd:element name="PaymentPeriod" type="xsd:string" minOccurs ="0" />
+			<xsd:element name="PlaceOfBirth" type="xsd:string" minOccurs ="0"/>
+			<xsd:element name="CountryOfBirthCode" minOccurs ="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="[A-Z]{2}"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Status" type="xsd:string" minOccurs="0" />
+			<xsd:element name="FaseHistorie" type="FasePeriodType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="MaritalStatus" type="xsd:string" minOccurs="0" />
+			<xsd:element name="TaxReduction" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="ContractEndDate" type="xsd:date" minOccurs="0" />
+      <xsd:element name="ContractHoursPerWeek" type="xsd:float" minOccurs="0" />
+      <xsd:element name="Modified" type="xsd:dateTime" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

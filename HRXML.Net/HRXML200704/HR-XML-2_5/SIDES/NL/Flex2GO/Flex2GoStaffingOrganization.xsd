@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.flex2go.nl/2012-04"
+			xmlns:hr="http://ns.hr-xml.org/2007-04-15"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.flex2go.nl/2012-04"
+			elementFormDefault="qualified"
+			version="2012-04">
+  <xsd:annotation>
+		<xsd:documentation>
+
+			Name: Flex2GoStaffingOrganization.xsd
+			Purpose: Defines the additional StaffingOrganization schema elements for the Flexservice and Flex2Go product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../BankAccountInfo.xsd"/>
+  <xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../CPO/EntityIdType.xsd" />
+  <xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../ContactInfo.xsd"/>
+
+  <xsd:element name="Flex2GoStaffingOrganization" type="Flex2GoStaffingOrganizationType"/>
+
+   
+  <xsd:complexType name="Flex2GoStaffingOrganizationType">
+		<xsd:sequence>
+      <xsd:element name="BankAccountInfo" type="hr:BankAccountInfoType" minOccurs="0" maxOccurs ="unbounded"/>
+
+      <xsd:element name="Comment" type="xsd:string" minOccurs ="0"/>
+
+      <xsd:element name="BureauId" type="xsd:string" minOccurs ="0"/>
+      <xsd:element name="BureauNaam" type="xsd:string" minOccurs ="0"/>
+
+      <xsd:element name="RelatieBeheerderId" type="xsd:string" minOccurs ="0"/>
+      <xsd:element name="Manager" type="xsd:string" minOccurs ="0"/>
+
+      <xsd:element name="BTWGroepId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BTWBepalingId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="BTWNummer" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Debiteurnummer" type="xsd:string" minOccurs="0"/>
+
+
+      <xsd:element name="Contacts" type="FlexserviceContactType" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="Kostenplaatsen" type="FlexserviceKostenplaatsen" minOccurs="0" maxOccurs="unbounded" />
+
+      <xsd:element name="Status" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Modified" type="xsd:dateTime" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+  <xsd:complexType name="FlexserviceKostenplaatsen">
+    <xsd:sequence>
+      <xsd:element name="Id" type="xsd:string" />
+      <xsd:element name="Name" type="xsd:string" />
+      <xsd:element name="Description" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FlexserviceContactType">
+    <xsd:sequence>
+      <xsd:element name="ContactMethodes" type="hr:ContactMethodType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="ContactId" type="hr:EntityIdType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="Name" type="hr:PersonNameType" minOccurs="0" />
+      <xsd:element name="Initials" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Function" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Primary" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="Nationality" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Sex" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Status" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Comment" type="xsd:string" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

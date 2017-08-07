@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by Jasper Roes (TNO) -->
+<xsd:schema xmlns="http://ns.setu.nl/2008-01" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" targetNamespace="http://ns.setu.nl/2008-01" elementFormDefault="qualified" version="2008-01">
+	<xsd:annotation>
+		<xsd:documentation>
+		
+		Name: AssignmentAdditionalNL.xsd
+		Purpose: Defines the additional assignment schema elements for the Netherlands.
+		Author(s): SETU
+		Contact: helpdesk@setu.nl
+		Release: v1.1 
+
+	</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../StaffingWorkSite.xsd"/>
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../CPO/EntityIdType.xsd"/>
+	<xsd:element name="AssignmentAdditionalNL" type="AssignmentAdditionalNLType"/>
+	<xsd:complexType name="CLAReferenceType">
+		<xsd:sequence>
+			<xsd:element name="Description" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="CLAId" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AssignmentAdditionalNLType">
+		<xsd:sequence>
+			<xsd:element name="ProcurementOrderId" type="hr:EntityIdType" minOccurs="0"/>
+			<xsd:element name="JobTitle" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="JobId" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="JobGroup" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="StaffingWorkSite" type="hr:StaffingWorkSiteType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ShiftType" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="CLAReference" type="CLAReferenceType" minOccurs="0"/>
+			<xsd:element name="ReasonOfChange" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

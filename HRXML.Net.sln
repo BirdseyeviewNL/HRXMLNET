@@ -1,0 +1,45 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Birdseyeview.HRXML.SampleNocore", "Birdseyeview.HRXML.SampleNocore\Birdseyeview.HRXML.SampleNocore.csproj", "{61784C86-88C4-4623-8C57-3BB635B6A7C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRXML.Net", "HRXML.Net\HRXML.Net.csproj", "{F3CA8C8F-86E4-4100-811E-085A197F5E4B}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs21
+		SccProjectUniqueName0 = HRXML.Net\\HRXML.Net.csproj
+		SccProjectName0 = HRXML.Net
+		SccLocalPath0 = HRXML.Net
+		SccProjectUniqueName1 = Birdseyeview.HRXML.SampleNocore\\Birdseyeview.HRXML.SampleNocore.csproj
+		SccProjectName1 = Birdseyeview.HRXML.SampleNocore
+		SccLocalPath1 = Birdseyeview.HRXML.SampleNocore
+		SccLocalPath2 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61784C86-88C4-4623-8C57-3BB635B6A7C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61784C86-88C4-4623-8C57-3BB635B6A7C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61784C86-88C4-4623-8C57-3BB635B6A7C2}.Debug|x86.ActiveCfg = Debug|x86
+		{61784C86-88C4-4623-8C57-3BB635B6A7C2}.Debug|x86.Build.0 = Debug|x86
+		{61784C86-88C4-4623-8C57-3BB635B6A7C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61784C86-88C4-4623-8C57-3BB635B6A7C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61784C86-88C4-4623-8C57-3BB635B6A7C2}.Release|x86.ActiveCfg = Release|x86
+		{61784C86-88C4-4623-8C57-3BB635B6A7C2}.Release|x86.Build.0 = Release|x86
+		{F3CA8C8F-86E4-4100-811E-085A197F5E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3CA8C8F-86E4-4100-811E-085A197F5E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3CA8C8F-86E4-4100-811E-085A197F5E4B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F3CA8C8F-86E4-4100-811E-085A197F5E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3CA8C8F-86E4-4100-811E-085A197F5E4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3CA8C8F-86E4-4100-811E-085A197F5E4B}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

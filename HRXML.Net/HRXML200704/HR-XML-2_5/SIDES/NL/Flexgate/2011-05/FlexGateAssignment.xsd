@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.birdseyeview.nl/Flexgate/2011-05" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" xmlns:setu="http://ns.setu.nl/2008-01" targetNamespace="http://www.birdseyeview.nl/Flexgate/2011-05" elementFormDefault="qualified" version="2011-05">
+	<xsd:annotation>
+		<xsd:documentation>
+
+			Name: FlexGateAssignment.xsd
+			Purpose: Defines the additional Assignment schema elements for the Flex2GO and FlexGate product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.setu.nl/2008-01" schemaLocation="../../2008-01/AssignmentAdditionalNL.xsd"/>
+
+	<xsd:element name="FlexGateAssignment" type="FlexGateAssignmentType"/>
+	<xsd:complexType name="FlexGateAssignmentType">
+		<xsd:sequence>
+			<!-- Inlenersbeloning toepassen -->
+			<xsd:element name="CustomerCSA" type="xsd:boolean" />			
+      <!-- Aantal dagen per week -->
+			<xsd:element name="DaysPerWeek" type="xsd:decimal" />
+      <!-- Aantal uren per week -->
+      <xsd:element name="HoursPerWeek" type="xsd:decimal" />
+			<!-- Laatste update datum -->
+			<xsd:element name="Modified" type="xsd:dateTime" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+
+</xsd:schema>

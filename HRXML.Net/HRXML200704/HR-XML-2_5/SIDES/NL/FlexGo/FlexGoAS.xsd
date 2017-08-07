@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.flex2go.nl/2015-12"
+			xmlns:hr="http://ns.hr-xml.org/2007-04-15"
+			xmlns:ft="http://www.flex2go.nl/FlexGoTypes"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.flex2go.nl/2015-12"
+			elementFormDefault="qualified"
+			version="2015-12">
+  <xsd:annotation>
+    <xsd:documentation>
+
+      Name: FlexGoAS.xsd
+      Purpose: Defines the additional humanresource schema elements for the Flex-go and Flex2Go product.
+      Author(s): Birdseyeview B.V.
+      Contact: info@birdseyeview.nl
+
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:import namespace="http://www.flex2go.nl/FlexGoTypes" schemaLocation="FlexGoTypes.xsd" />
+
+  <xsd:element name="FlexGoAssignment" type="FlexGoAssignmentType"/>
+
+  <xsd:complexType name="FlexGoAssignmentType">
+    <xsd:sequence>
+      <xsd:element name="SectorGroepId" type="xsd:int" minOccurs="0" />
+      <xsd:element name="SectorGroep" type="xsd:string" minOccurs="0" />
+
+      <xsd:element name="Cao" type="xsd:string" minOccurs="0" />
+
+      <xsd:element name="BedrijfverenigingId" type="xsd:int" minOccurs="0" />
+      <xsd:element name="Bedrijfvereniging" type="xsd:string" minOccurs="0" />
+
+
+      <xsd:element name="Links" type="ft:FlexGoListType" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="Notities" type="ft:FlexGoNotitieType" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="ExtraData" type="ft:FlexGoDataType" minOccurs="0" maxOccurs="unbounded" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

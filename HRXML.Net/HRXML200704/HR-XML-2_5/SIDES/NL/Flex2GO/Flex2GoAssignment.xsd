@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.flex2go.nl/2016-06" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" xmlns:setu="http://ns.setu.nl/2008-01" targetNamespace="http://www.flex2go.nl/2016-06" elementFormDefault="qualified" version="2016-06">
+  <xsd:annotation>
+    <xsd:documentation>
+
+      Name: Flex2GoAssignment.xsd
+      Purpose: Defines the additional Assignment schema elements for the Flex2GO product.
+      Author(s): Birdseyeview B.V.
+      Contact: info@birdseyeview.nl
+
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:import namespace="http://ns.setu.nl/2008-01" schemaLocation="../2008-01/AssignmentAdditionalNL.xsd"/>
+
+  <xsd:element name="Flex2GoAssignment" type="Flex2GoAssignmentType"/>
+  <xsd:complexType name="Flex2GoAssignmentType">
+    <xsd:sequence>
+      <!-- Inlenersbeloning toepassen -->
+      <xsd:element name="FirstContractStartDate" type="xsd:date" minOccurs="0" />
+      <!-- Aantal dagen per week -->
+      <xsd:element name="LastContractEndDate" type="xsd:date" minOccurs="0" />
+      <!-- Aantal contracten -->
+      <xsd:element name="NumberOfContracts" type="xsd:int"  minOccurs="0"/>
+      <!-- Aantal weken gewerkt -->
+      <xsd:element name="WeeksWorked" type="xsd:int"  minOccurs="0"/>
+      <!-- Tellen vanaf  -->
+      <xsd:element name="CountFrom" type="xsd:date" minOccurs="0" />
+      <!-- Doorplaatsing  -->
+      <xsd:element name="Continuance" type="xsd:boolean" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+</xsd:schema>

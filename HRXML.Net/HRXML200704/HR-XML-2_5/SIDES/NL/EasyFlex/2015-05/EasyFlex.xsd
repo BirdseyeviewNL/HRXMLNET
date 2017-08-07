@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.easyflex.net/2015-05" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:hr="http://ns.hr-xml.org/2007-04-15" 
+            xmlns:setu="http://ns.setu.nl/2008-01" 
+            targetNamespace="http://www.easyflex.net/2015-05" 
+            elementFormDefault="qualified" 
+            version="2015-05">
+  <xsd:annotation>
+    <xsd:documentation>
+
+      Name: EasyFlex.xsd
+      Purpose: Defines the additional schema elements for the Flex2GO and EasyFlex product.
+      Author(s): Birdseyeview B.V.
+      Contact: info@birdseyeview.nl
+
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="EasyFlex" type="EasyFlexType"/>
+  <xsd:complexType name="EasyFlexType">
+    <xsd:sequence>
+      <xsd:element name="EasyFlexUserName" type="xsd:string" />
+      <xsd:element name="EasyFlexPassword" type="xsd:string" />
+      <xsd:element name="EasyFlexID" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

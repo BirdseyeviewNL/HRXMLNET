@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.nocore.nl/2010-10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" xmlns:setu="http://ns.setu.nl/2008-01" targetNamespace="http://www.nocore.nl/2010-10" elementFormDefault="qualified" version="2010-10">
+	<xsd:annotation>
+		<xsd:documentation>
+
+			Name: NocoreAssignment.xsd
+			Purpose: Defines the additional Nocore schema elements for the Flex2GO and Nocore product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:include schemaLocation="NocoreLocation.xsd" />
+	<xsd:include schemaLocation="NocoreStaffingOrganization.xsd" />
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../SIDES/StaffingOrganization.xsd" />
+	<xsd:element name="NocoreBase" type="NocoreBaseType" />
+	<xsd:complexType name="NocoreBaseType">
+		<xsd:sequence>
+			<xsd:element name="Company" type="hr:StaffingOrganizationType" />
+			<xsd:element name="Locations" type="NocoreLocationType" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="ReservationModels" type="ReservationModelType" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="RateModels" type="RateModelType" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="RateTypes" type="RateType" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="ExpenseTypes" type="ExpenseType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ReservationModelType">
+		<xsd:sequence>
+			<xsd:element name="Code" type="xsd:int"/>
+			<xsd:element name="Name" type="xsd:string" />
+			<xsd:element name="StartDate" type="xsd:date"/>
+			<xsd:element name="EndDate" type="xsd:date" minOccurs="0"/>
+			<xsd:element name="CustomerCSA" type="xsd:boolean"/>
+			<xsd:element name="HolidayWorker" type="xsd:boolean"/>
+			<xsd:element name="Archive" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="RateModelType">
+		<xsd:sequence>
+			<xsd:element name="Code" type="xsd:int"/>
+			<xsd:element name="Name" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="StartDate" type="xsd:date"/>
+			<xsd:element name="EndDate" type="xsd:date" minOccurs="0"/>
+			<xsd:element name="Rates" minOccurs="0" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Rate" type="RateType" />
+						<xsd:element name="Percentage" type="xsd:decimal" minOccurs="0"/>
+						<xsd:element name="Factor" type="xsd:decimal" minOccurs="0"/>
+						<xsd:element name="Addition" type="xsd:decimal" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Archive" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="RateType">
+		<xsd:sequence>
+			<xsd:element name="Code" type="xsd:string"/>
+			<xsd:element name="Name" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ExpenseType">
+		<xsd:sequence>
+			<xsd:element name="Code" type="xsd:string"/>
+			<xsd:element name="Name" type="xsd:string"/>
+			<xsd:element name="Unit" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

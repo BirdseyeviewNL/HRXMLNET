@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.afas.nl/2013-10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" xmlns:setu="http://ns.setu.nl/2008-01" targetNamespace="http://www.afas.nl/2013-10" elementFormDefault="qualified" version="2013-10">
+	<xsd:annotation>
+		<xsd:documentation>
+
+			Name: AfasAssignment.xsd
+			Purpose: Defines the additional Assignment schema elements for the Flex2GO and Afas product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="AfasAssignment" type="AfasAssignmentType"/>
+	<xsd:complexType name="AfasAssignmentType">
+		<xsd:sequence>
+			<!-- Projectgroep -->
+			<xsd:element name="ProjectGroup" type="xsd:string" minOccurs="0" />
+      <!-- SoortMedewerker (Code) -->
+      <xsd:element name="EmployeeType" type="xsd:string" minOccurs="0" />
+      <!-- WerkGever (Code) -->
+      <xsd:element name="CompanyId" type="xsd:string" minOccurs="0" />
+      <!-- Cao (Code) -->
+      <xsd:element name="CLA" type="xsd:string" minOccurs="0" />
+      <!-- Arbeidsvoorwaarde (Code) -->
+      <xsd:element name="WorkingCondition" type="xsd:string" minOccurs="0" />
+      <!-- Dienstbetrekking (Code) per werkgever -->
+      <xsd:element name="JobType" type="xsd:string" minOccurs="0" />
+      <!-- Type Contact (Code) -->
+      <xsd:element name="ContractType" type="xsd:string" minOccurs="0" />
+      <!-- Proeftijd (Code) -->
+      <xsd:element name="TrialPeriod" type="xsd:string" minOccurs="0" />
+      <!-- Organisatorisatorische eenheid (Code) -->
+      <xsd:element name="OrganisationalUnit" type="xsd:string" minOccurs="0" />
+      <!-- Functie (Code) -->
+      <xsd:element name="Function" type="xsd:string" minOccurs="0" />
+      <!-- ABU Functiegroep (Code) -->
+      <xsd:element name="AbuFunctionGroup" type="xsd:string" minOccurs="0" />
+      <!-- Soort salaris (Code) -->
+      <xsd:element name="SalaryType" type="xsd:string" minOccurs="0" />
+      <!-- PeriodeTabel (Code) -->
+      <xsd:element name="PeriodTable" type="xsd:string" minOccurs="0" />
+      <!-- Soort Arbeidsverhouding (Code) -->
+      <xsd:element name="IncomeRelationType" type="xsd:string" minOccurs="0" />
+      <!-- Aard arbeidsverhouding (Code) -->
+      <xsd:element name="IncomeRelation" type="xsd:string" minOccurs="0" />
+      <!-- Tabelkleur (Code) -->
+      <xsd:element name="SalaryTableColor" type="xsd:string" minOccurs="0" />
+      <!-- TabelCode (Code) -->
+      <xsd:element name="SalaryTableCode" type="xsd:string" minOccurs="0" />
+      <!-- LoonheffingsKorting (Code) 0 of 1 koppelen aan vinkje loonheffing -->
+      <xsd:element name="TaxDeduction" type="xsd:boolean" minOccurs="0" />
+      <!-- Sector Risicogroep (Code) -->
+      <xsd:element name="SectorRiskGroup" type="xsd:string" minOccurs="0" />
+      <!-- Premiekorting (Code) -->
+      <xsd:element name="PremiumDiscount" type="xsd:string" minOccurs="0" />
+      <!-- Student Scholier ja /nee vinkje -->
+      <xsd:element name="Scholar" type="xsd:boolean" minOccurs="0" />
+      <!-- ZVW (Code) -->
+      <xsd:element name="ZVW" type="xsd:string" minOccurs="0" />
+      <!-- ZW toepassen (ja) -->
+      <xsd:element name="ZW" type="xsd:boolean" minOccurs="0" />
+      <!-- WW toepassen (ja) -->
+      <xsd:element name="WW" type="xsd:boolean" minOccurs="0" />
+      <!-- WAO/WIA toepassen (ja) -->
+      <xsd:element name="WIA" type="xsd:boolean" minOccurs="0" />
+      <!-- UFO toepassen (nee) -->
+      <xsd:element name="UFO" type="xsd:boolean" minOccurs="0" />
+      <!-- NormTabel -->
+      <xsd:element name="NormTabel" type="xsd:boolean" minOccurs="0" />
+      <!-- Fase -->
+      <xsd:element name="Phase" type="xsd:string" minOccurs="0" />
+      <!-- RisicoGroep -->
+      <xsd:element name="RiskGroup" type="xsd:string" minOccurs="0" />
+      <!-- StippPensioen -->
+      <xsd:element name="StippPension" type="xsd:string" minOccurs="0" />
+      <!-- PeriodiekUitbetATV -->
+      <xsd:element name="PercPaymentATV" type="xsd:decimal" minOccurs="0" />
+      <!-- PeriodiekUitbetATV -->
+      <xsd:element name="RecurringPaymentATV" type="xsd:boolean" minOccurs="0" />
+      <!-- PeriodiekUitbetATV -->
+      <xsd:element name="PercPaymentSurp" type="xsd:decimal" minOccurs="0" />
+      <!-- PeriodiekUitbetATV -->
+      <xsd:element name="RecurringPaymentSurp" type="xsd:boolean" minOccurs="0" />
+      <!-- AFAS parameters -->
+      <xsd:element name="Parameter" type="AfasParameterType" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+	</xsd:complexType>
+  <xsd:complexType name="AfasParameterType">
+    <xsd:sequence>
+      <xsd:element name="ParameterId" type="xsd:long" />
+      <xsd:element name="Waarde" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

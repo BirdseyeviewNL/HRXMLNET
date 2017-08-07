@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="HRXMLDocumentType"
+      xmlns="http://www.flex2go.nl/2012-04" 
+			xmlns:hr="http://ns.hr-xml.org/2007-04-15"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+			targetNamespace="http://www.flex2go.nl/2012-04" 
+			elementFormDefault="qualified" 
+			version="2012-04">
+    <xsd:annotation>
+	<xsd:documentation>
+
+		Name: Document.xsd
+		Purpose: Defines the additional Configuration schema elements for the Flex2GO product.
+		Author(s): Birdseyeview B.V.
+		Contact: info@birdseyeview.nl
+
+	</xsd:documentation>
+</xsd:annotation>
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../CPO/EntityIdType.xsd"/>
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../CPO/UserArea.xsd"/>
+  <xsd:element name="HRXMLDocument" type="HRXMLDocumentType" />
+  <xsd:complexType name="HRXMLDocumentType">
+		<xsd:sequence>
+			<xsd:element name="DocumentId" type="hr:EntityIdType" maxOccurs ="unbounded" />
+			<xsd:element name="DocumentFile" type="DocumentFileType" />
+			<xsd:element name="OrganisatieUnitnr" type="xsd:string" minOccurs="0" />
+      <xsd:choice>
+        <xsd:element name="CertificaatDocument" type="HRXMLCertificaatDocumentType" />
+        <xsd:element name="ContractDocument" type="HRXMLContractDocumentType" />
+        <xsd:element name="CVDocument" type="HRXMLCVDocumentType" />
+        <xsd:element name="FactuurDocument" type="HRXMLFactuurDocumentType" />
+        <xsd:element name="IDDocument" type="HRXMLIDDocumentType" />
+        <xsd:element name="JaaropgaveDocument" type="HRXMLJaaropgaveDocumentType" />
+        <xsd:element name="LoonstrookDocument" type="HRXMLLoonstrookDocumentType" />
+        <xsd:element name="MedewerkerDocument" type="HRXMLMedewerkerDocumentType" />
+        <xsd:element name="OpdrachtgeverDocument" type="HRXMLOpdrachtgeverDocumentType" />
+      </xsd:choice>
+    </xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="HRXMLFactuurDocumentType">
+		<xsd:sequence>
+			<xsd:element name="FactuurId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+			<xsd:element name="KlantId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+			<xsd:element name="FactuurDatum" type="xsd:date" minOccurs="0" />
+			<xsd:element name="VervalDatum" type="xsd:date" minOccurs="0" />
+			<xsd:element name="ex_Bedrag" type="xsd:decimal" minOccurs="0" />
+			<xsd:element name="incl_Bedrag" type="xsd:decimal" minOccurs="0" />
+			<xsd:element name="Factuurnummer" type="xsd:string" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HRXMLIDDocumentType">
+		<xsd:sequence>
+			<xsd:element name="IdDocumentId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+			<xsd:element name="MedewerkerId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+			<xsd:element name="Nummer" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Soort" type="xsd:string" minOccurs="0" />
+			<xsd:element name="VervalDatum" type="xsd:date" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HRXMLContractDocumentType">
+		<xsd:sequence>
+			<xsd:element name="ContractId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+			<xsd:element name="MedewerkerId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+			<xsd:element name="KlantId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+      <xsd:element name="Soort" type="xsd:string" minOccurs="0" />
+    </xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HRXMLCertificaatDocumentType">
+		<xsd:sequence>
+			<xsd:element name="CertificaatId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+			<xsd:element name="MedewerkerId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+			<xsd:element name="Soort" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Omschrijving" type="xsd:string" minOccurs="0" />
+			<xsd:element name="BehaaldDatum" type="xsd:date" minOccurs="0" />
+			<xsd:element name="VervalDatum" type="xsd:date" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HRXMLCVDocumentType">
+		<xsd:sequence>
+			<xsd:element name="CvId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+			<xsd:element name="MedewerkerId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HRXMLLoonstrookDocumentType">
+		<xsd:sequence>
+			<xsd:element name="LoonstrookId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+			<xsd:element name="MedewerkerId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+			<xsd:element name="Jaar" type="xsd:int" minOccurs="0" />
+			<xsd:element name="Verloonweek" type="xsd:int" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="OvermaakDatum" type="xsd:date" minOccurs="0" />
+			<xsd:element name="AanmaakDatum" type="xsd:date" minOccurs="0" />
+			<xsd:element name="RunNr" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Loonstrooknummer" form="unqualified" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HRXMLJaaropgaveDocumentType">
+		<xsd:sequence>
+			<xsd:element name="JaaropgaveId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+			<xsd:element name="MedewerkerId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+			<xsd:element name="Jaar" type="xsd:int" minOccurs="0" />
+			<xsd:element name="AanmaakDatum" type="xsd:date" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HRXMLMedewerkerDocumentType">
+		<xsd:sequence>
+			<xsd:element name="MedewerkerId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="HRXMLOpdrachtgeverDocumentType">
+		<xsd:sequence>
+			<xsd:element name="KlantId" type="hr:EntityIdType" minOccurs="0" maxOccurs ="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentFileType">
+		<xsd:sequence>
+			<xsd:element name="Bestandsnaam" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Type" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Base64Content" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Omschrijving" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Onderwerp" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Versie" type="xsd:string" minOccurs="0" />
+    </xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

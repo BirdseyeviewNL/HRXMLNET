@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.birdseyeview.nl/Flexgate/2011-05" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" xmlns:setu="http://ns.setu.nl/2008-01" targetNamespace="http://www.birdseyeview.nl/Flexgate/2011-05" elementFormDefault="qualified" version="2011-05">
+	<xsd:annotation>
+		<xsd:documentation>
+
+			Name: FlexGateStaffingOrganisation.xsd
+			Purpose: Defines the additional StaffingOrganization schema elements for the Flex2GO and FlexGate product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.setu.nl/2008-01" schemaLocation="../../2008-01/AssignmentAdditionalNL.xsd" />
+	<xsd:import namespace="http://ns.setu.nl/2008-01" schemaLocation="../../2008-01/HumanResourceAdditionalNL.xsd" />
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../CPO/EntityIdType.xsd" />
+	
+	<xsd:element name="FlexGateStaffingOrganization" type="FlexGateStaffingOrganizationType"/>
+	<xsd:complexType name="FlexGateStaffingOrganizationType">
+		<xsd:sequence>
+			<xsd:element name="AccountManager" type="xsd:string" minOccurs="0" />
+			<xsd:element name="CLA" type="setu:CLAReferenceType" minOccurs="0"/>  <!--betalingstermijn?-->
+			<xsd:element name="VATNumber" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Modified" type="xsd:dateTime" />
+			<xsd:element name="Contacts" type="FlexGateContactType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="FlexGateContactType">
+		<xsd:sequence>
+			<xsd:element name="ContactId" type="hr:EntityIdType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Initials" type="xsd:string" />
+			<xsd:element name="Sex" type="setu:SexType" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

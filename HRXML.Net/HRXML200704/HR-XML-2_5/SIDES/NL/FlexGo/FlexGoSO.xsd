@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.flex2go.nl/2015-12"
+			xmlns:hr="http://ns.hr-xml.org/2007-04-15"
+			xmlns:ft="http://www.flex2go.nl/FlexGoTypes"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.flex2go.nl/2015-12"
+			elementFormDefault="qualified"
+			version="2015-12">
+  <xsd:annotation>
+    <xsd:documentation>
+
+      Name: FlexGoSO.xsd
+      Purpose: Defines the additional humanresource schema elements for the Flex-go and Flex2Go product.
+      Author(s): Birdseyeview B.V.
+      Contact: info@birdseyeview.nl
+
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:import namespace="http://www.flex2go.nl/FlexGoTypes" schemaLocation="FlexGoTypes.xsd" />
+
+  <xsd:element name="FlexGoStaffingOrganization" type="FlexGoStaffingOrganizationType"/>
+
+  <xsd:complexType name="FlexGoStaffingOrganizationType">
+    <xsd:sequence>
+      <xsd:element name="AccountManagerId" type="xsd:int" minOccurs="0" />
+      <xsd:element name="CategorieId" type="xsd:int" minOccurs="0" />
+      <xsd:element name="BedrijfsCode" type="xsd:int" minOccurs="0" />
+      <xsd:element name="Nummer" type="xsd:int" minOccurs="0" />
+
+      <xsd:element name="BTWCode" type="xsd:int" minOccurs="0" />
+      <xsd:element name="BTWTariefId" type="xsd:int" minOccurs="0" />
+      
+      <xsd:element name="KredietLimiet" type="xsd:float" minOccurs="0" />
+
+      <xsd:element name="VerkoopFactor" type="xsd:decimal" minOccurs="0" />
+
+      <xsd:element name="BetaalWijzeId" type="xsd:int" minOccurs="0" />
+      <xsd:element name="BetaalTermijnId" type="xsd:int" minOccurs="0" />
+      <xsd:element name="BetaalConditieId" type="xsd:int" minOccurs="0" />
+
+      <xsd:element name="DebiteurgroepId" type="xsd:int" minOccurs="0" />
+      <xsd:element name="GPercentage" type="xsd:float" minOccurs="0" />
+      <xsd:element name="GPercentageRekening" type="xsd:string" minOccurs="0" />
+
+      <xsd:element name="Links" type="ft:FlexGoListType" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="Notities" type="ft:FlexGoNotitieType" minOccurs="0" maxOccurs="unbounded" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="AssignmentAdditionalMP"
+  targetNamespace="http://ns.xxcompany.nl/2010-01"
+	elementFormDefault="qualified"
+  xmlns="http://ns.xxcompany.nl/2010-01"    
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+>
+  <xsd:annotation>
+    <xsd:documentation>
+
+      Name: AssignmentAdditionalMP.xsd
+      Purpose: Defines the additional Assignment schema elements for the Flex2GO and FlexService product.
+      Author(s): Birdseyeview B.V.
+      Contact: info@birdseyeview.nl
+
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:complexType name="KandidaatContractMPType">
+    <xsd:sequence>
+      <xsd:element name="KandidaatContractID" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="KandidaatContractBureauPartij" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="KandidaatContractSoortContract" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="KandidaatContractBeginDatum" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="KandidaatContractEindDatum" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="KandidaatContractFase" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="KandidaatContractVerloningsType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="KandidaatContractLoonTijdVak" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="KandidaatContractContractFunctie" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="KandidaatContractAantalUrenPerWeek" type="xsd:decimal" minOccurs="0"/>
+      <xsd:element name="KandidaatContractOpstelDatum" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="KandidaatContractEigenaar" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="KandidaatContractBeheerder" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="AssignmentAdditionalMP" type="AssignmentAdditionalMPType" />
+  <xsd:complexType name="AssignmentAdditionalMPType">
+    <xsd:sequence>
+      <xsd:element name="Owner" type="xsd:string" />
+      <xsd:element name="SoortContractVerloningssoort" type="xsd:string" />
+      <xsd:element name="InkomstenverhoudingLoontijdvak" type="xsd:string" />
+      <xsd:element name="InkomstenverhoudingAdministratie" type="xsd:string" />
+      <xsd:element name="Staff" type="xsd:string" />
+      <xsd:element name="RiscGroup" type="xsd:integer" />
+      <xsd:element name="FunctionLevel" type="xsd:integer" />
+      <xsd:element name="FunctionLevelA" type="xsd:integer" />
+      <xsd:element name="FunctionLevelB" type="xsd:integer" />
+      <xsd:element name="FunctionLevelC" type="xsd:integer" />
+      <xsd:element name="BillSeparately" type="xsd:integer" />
+      <xsd:element name="ContractType" type="xsd:string" />
+      <xsd:element name="ContractFunction" type="xsd:string" />
+      <xsd:element name="CAO" type="xsd:string" />
+      <xsd:element name="HoursPerWeek" type="xsd:decimal" />
+      <xsd:element name="Phase" type="xsd:string" />
+      <xsd:element name="PhaseTransition" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="NormInstroom" type="xsd:string" />
+      <xsd:element name="ParentAssignment" minOccurs="0"/>
+      <xsd:element name="AssignmentType" type="xsd:string" />
+      <xsd:element name="VAT" type="xsd:integer" />
+      <xsd:element name="Specialisme" type="xsd:integer" />
+      <xsd:element name="UitzendWijze" type="xsd:string" />
+      <xsd:element name="InkomstenVerhoudingSector" type="xsd:string" />
+      <xsd:element name="KandidaatContractMP" type="KandidaatContractMPType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

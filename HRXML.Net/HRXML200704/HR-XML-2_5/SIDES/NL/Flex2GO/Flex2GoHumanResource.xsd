@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.flex2go.nl/2012-04"
+			xmlns:hr="http://ns.hr-xml.org/2007-04-15"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.flex2go.nl/2012-04"
+			elementFormDefault="qualified"
+			version="2012-04">
+  <xsd:annotation>
+		<xsd:documentation>
+
+			Name: Flex2GoHumanResource.xsd
+			Purpose: Defines the additional humanresource schema elements for the Flexservice and Flex2Go product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../BankAccountInfo.xsd"/>
+	<xsd:element name="Flex2GoHumanResource" type="Flex2GoHumanResourceType"/>
+   
+  <xsd:complexType name="DriverLicenseEndorsementsType">
+    <xsd:sequence>
+      <xsd:element name="Name" type="xsd:string" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="DriverLicenseType">
+    <xsd:sequence>
+      <xsd:element name="Number" type="xsd:string" minOccurs="0" />
+      <xsd:element name="AcuiredDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="ExpireDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="Country" minOccurs ="0">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-Z]{2}"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>      
+      <xsd:element name="Endorsements" type="DriverLicenseEndorsementsType" minOccurs="0" maxOccurs ="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AvailablityType">
+    <xsd:sequence>
+      <xsd:element name="StartDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="EndDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="Rooster" type="xsd:string" minOccurs="0" />
+      <xsd:element name="MaximumHours" type="xsd:short" minOccurs="0" />
+      <xsd:element name="MinimumHours" type="xsd:short" minOccurs="0" />
+      <xsd:element name="MondayStartDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="MondayEndDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="TuesdayStartDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="TuesdayEndDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="WednesdayStartDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="WednesdayEndDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="ThursdayStartDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="ThursdayEndDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="FridayStartDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="FridayEndDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="SaturdayStartDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="SaturdayEndDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="SundayStartDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="SundayEndDate" type="xsd:date" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ReservationsType">
+    <xsd:sequence>
+      <xsd:element name="Year" type="xsd:int" minOccurs="0" />
+      <xsd:element name="Name" type="xsd:string" minOccurs="0" />
+      <xsd:element name="Amount" type="xsd:decimal" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="BankAccountExtraType">
+    <xsd:sequence>
+      <xsd:element name="BankAccountNumber" type="xsd:string" minOccurs="0" />
+      <xsd:element name="PaymentReference" type="xsd:string" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Flex2GoHumanResourceType">
+		<xsd:sequence>
+			<xsd:element name="Phase" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Initials" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Nationality" type="xsd:string" minOccurs="0"/>
+
+      <xsd:element name="BankAccountInfo" type="hr:BankAccountInfoType" minOccurs="0" maxOccurs ="unbounded"/>
+      <xsd:element name="BankAccountExtra" type="BankAccountExtraType" minOccurs="0" maxOccurs ="unbounded"/>
+      
+      <xsd:element name="Availability" type="AvailablityType" minOccurs="0" maxOccurs ="unbounded"/>
+      <xsd:element name="Reservations" type="ReservationsType" minOccurs="0" maxOccurs ="unbounded"/>
+      <xsd:element name="DriverLicense" type="DriverLicenseType" minOccurs="0"/>
+
+      <xsd:element name="PaymentPeriod" type="xsd:string" minOccurs ="0" />
+			<xsd:element name="PlaceOfBirth" type="xsd:string" minOccurs ="0"/>
+      <xsd:element name="Language" type="xsd:string" minOccurs ="0"/>
+      <xsd:element name="Comment" type="xsd:string" minOccurs ="0"/>
+      <xsd:element name="Kind" type="xsd:string" minOccurs ="0"/>
+
+      <xsd:element name="BureauId" type="xsd:string" minOccurs ="0"/>
+      <xsd:element name="BureauNaam" type="xsd:string" minOccurs ="0"/>
+      <xsd:element name="RelatieBeheerderId" type="xsd:string" minOccurs ="0"/>
+      <xsd:element name="Manager" type="xsd:string" minOccurs ="0"/>
+      
+      <xsd:element name="CountryOfBirthCode" minOccurs ="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="[A-Z]{2}"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Status" type="xsd:string" minOccurs="0" />
+			<xsd:element name="MaritalStatus" type="xsd:string" minOccurs="0" />
+			<xsd:element name="Modified" type="xsd:dateTime" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

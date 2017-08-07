@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.nocore.nl/2010-10" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" targetNamespace="http://www.nocore.nl/2010-10" elementFormDefault="qualified" version="2010-10">
+	<xsd:annotation>
+		<xsd:documentation>
+
+			Name: NocoreResume.xsd
+			Purpose: Defines the additional Nocore schema elements for the Flex2GO and Nocore product.
+			Author(s): Birdseyeview B.V.
+			Contact: info@birdseyeview.nl
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../CPO/EntityIdType.xsd" />
+	<xsd:element name="NocoreResume" type="NocoreResumeType"/>
+	<xsd:complexType name="NocoreResumeType">
+		<xsd:sequence>
+			<xsd:element name="Availability" type="AvailibilityType" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="HoursPerWeekAvailable" type="xsd:decimal" minOccurs="0" />
+			<xsd:element name="DesiredWork" type="DesiredWorkType" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AvailibilityType">
+		<xsd:sequence>
+			<xsd:element name="StartDate" type="xsd:date"/>
+			<xsd:element name="EndDate" type="xsd:date" minOccurs="0" />
+			<xsd:element name="DayOfWeek" type="DayOfWeekType"/>
+			<xsd:element name="PartOfDay" type="PartOfDayType" />
+			<xsd:element name="AvailabilityStatus" type="AvailabilityStatusType" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="DesiredWorkType">
+		<xsd:sequence>
+			<xsd:element name="Items" type="StructuredDesiredWorkType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Description" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="StructuredDesiredWorkType">
+		<xsd:sequence>
+			<xsd:element name="DesiredWorkId" type="hr:EntityIdType" maxOccurs="unbounded"/>
+			<xsd:element name="DesiredWork" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="AvailabilityStatusType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Available"/>
+			<xsd:enumeration value="Unavailable"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="DayOfWeekType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Monday"/>
+			<xsd:enumeration value="Tuesday"/>
+			<xsd:enumeration value="Wednesday"/>
+			<xsd:enumeration value="Thursday"/>
+			<xsd:enumeration value="Friday"/>
+			<xsd:enumeration value="Saturday"/>
+			<xsd:enumeration value="Sunday"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PartOfDayType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Morning"/>
+			<xsd:enumeration value="Afternoon"/>
+			<xsd:enumeration value="Evening"/>
+			<xsd:enumeration value="Night"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="NocorePositionHistory" type="NocorePositionHistoryType"/>
+	<xsd:complexType name="NocorePositionHistoryType">
+		<xsd:sequence>
+			<xsd:element name="PositionHistoryId" type="hr:EntityIdType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="NocoreSchoolOrInstitution" type="NocoreSchoolOrInstitutionType"/>
+	<xsd:complexType name="NocoreSchoolOrInstitutionType">
+		<xsd:sequence>
+			<xsd:element name="SchoolOrInstitutionId" type="hr:EntityIdType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
