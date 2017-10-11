@@ -33,6 +33,7 @@
       <xsd:element name="NumberOfContracts" type="xsd:int"  minOccurs="0"/>
       <xsd:element name="WeeksWorked" type="xsd:int"  minOccurs="0"/>
       <xsd:element name="Continuance" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="TaxReductionSeafaring" type="xsd:boolean" minOccurs ="0" />
       <xsd:element name="Modified" type="xsd:dateTime" />
     </xsd:sequence>
   </xsd:complexType>

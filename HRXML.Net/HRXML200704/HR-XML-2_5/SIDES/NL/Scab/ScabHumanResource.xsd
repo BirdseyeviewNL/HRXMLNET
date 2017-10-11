@@ -46,7 +46,10 @@
 			</xsd:element>
 			<xsd:element name="Status" type="xsd:string" minOccurs="0" />
 			<xsd:element name="MaritalStatus" type="xsd:string" minOccurs="0" />
-			<xsd:element name="Modified" type="xsd:dateTime" />
+            <xsd:element name="EmployeeNumber" type="xsd:integer" minOccurs ="0"/>
+            <xsd:element name="FirstDateEmployed" type="xsd:dateTime" minOccurs ="0"/>
+            <xsd:element name="LastDateEmployed" type="xsd:dateTime" minOccurs ="0"/>
+            <xsd:element name="Modified" type="xsd:dateTime" />
 		</xsd:sequence>
 	</xsd:complexType>
 </xsd:schema>

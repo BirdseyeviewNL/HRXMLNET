@@ -58,7 +58,11 @@ namespace HRXML.Net {
         private bool continuanceField;
         
         private bool continuanceFieldSpecified;
-        
+
+        private bool taxReductionSeafaringField;
+
+        private bool taxReductionSeafaringFieldSpecified;
+
         private System.DateTime modifiedField;
         
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -250,7 +254,33 @@ namespace HRXML.Net {
                 this.continuanceFieldSpecified = value;
             }
         }
-        
+
+        [System.Xml.Serialization.XmlElementAttribute(Order = 14)]
+        public bool TaxReductionSeafaring
+        {
+            get
+            {
+                return this.taxReductionSeafaringField;
+            }
+            set
+            {
+                this.taxReductionSeafaringField = value;
+            }
+        }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TaxReductionSeafaringSpecified
+        {
+            get
+            {
+                return this.taxReductionSeafaringFieldSpecified;
+            }
+            set
+            {
+                this.taxReductionSeafaringFieldSpecified = value;
+            }
+        }
+
         [System.Xml.Serialization.XmlElementAttribute(Order=14)]
         public System.DateTime Modified {
             get {
