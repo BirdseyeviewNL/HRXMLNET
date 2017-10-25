@@ -281,7 +281,7 @@ namespace HRXML.Net {
             }
         }
 
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
         public System.DateTime Modified {
             get {
                 return this.modifiedField;
