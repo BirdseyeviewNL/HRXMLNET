@@ -747,13 +747,17 @@ namespace HRXML.Net {
         private bool incl_BedragFieldSpecified;
         
         private string factuurnummerField;
-        
+
+        private List<EntityIdType> urenbriefjeIdField;
+
+
         /// <summary>
         /// HRXMLFactuurDocumentType class constructor
         /// </summary>
         public HRXMLFactuurDocumentType() {
             this.klantIdField = new List<EntityIdType>();
             this.factuurIdField = new List<EntityIdType>();
+            this.urenbriefjeIdField = new List<EntityIdType>();
         }
         
         [System.Xml.Serialization.XmlElementAttribute("FactuurId", Order=0)]
@@ -920,6 +924,32 @@ namespace HRXML.Net {
                 else {
                     this.factuurnummerField = value;
                     this.OnPropertyChanged("Factuurnummer");
+                }
+            }
+        }
+
+        [System.Xml.Serialization.XmlElementAttribute("UrenbriefjeId", Order = 7)]
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public List<EntityIdType> UrenbriefjeId
+        {
+            get
+            {
+                return this.urenbriefjeIdField;
+            }
+            set
+            {
+                if ((this.urenbriefjeIdField != null))
+                {
+                    if ((urenbriefjeIdField.Equals(value) != true))
+                    {
+                        this.urenbriefjeIdField = value;
+                        this.OnPropertyChanged("UrenbriefjeId");
+                    }
+                }
+                else
+                {
+                    this.urenbriefjeIdField = value;
+                    this.OnPropertyChanged("UrenbriefjeId");
                 }
             }
         }
