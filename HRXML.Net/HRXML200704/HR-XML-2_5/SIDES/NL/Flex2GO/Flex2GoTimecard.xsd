@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.flex2go.nl/2016-06" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:hr="http://ns.hr-xml.org/2007-04-15" xmlns:setu="http://ns.setu.nl/2008-01" targetNamespace="http://www.flex2go.nl/2016-06" elementFormDefault="qualified" version="2016-06">
+    <xsd:annotation>
+        <xsd:documentation>
+
+            Name: Flex2GoTimecard.xsd
+            Purpose: Defines the additional Timecard schema elements for the Flex2GO product.
+            Author(s): Birdseyeview B.V.
+            Contact: info@birdseyeview.nl
+
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:element name="Flex2GoTimecard" type="Flex2GoTimecardType"/>
+    <xsd:complexType name="Flex2GoTimecardType">
+        <xsd:sequence>
+            <!-- CostCenterCode -->
+            <xsd:element name="CostCenterCode" type="xsd:string" minOccurs="0" />
+            <!-- CostCenterDescription -->
+            <xsd:element name="CostCenterDescription" type="xsd:string" minOccurs="0" />
+            <!-- CostUnitCode -->
+            <xsd:element name="CostUnitCode" type="xsd:string" minOccurs="0" />
+            <!-- CostUnitDescription -->
+            <xsd:element name="CostUnitDescription" type="xsd:string" minOccurs="0" />
+            <!-- TaxHandlingCode -->
+            <xsd:element name="TaxHandlingCode" type="xsd:string" minOccurs="0" />
+            <!-- TaxHandlingDescription -->
+            <xsd:element name="TaxHandlingDescription" type="xsd:string" minOccurs="0" />           
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema>

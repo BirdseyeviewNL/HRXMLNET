@@ -979,6 +979,53 @@ namespace HRXML.Net
             }
         }
 
+        private Flex2GoTimecardType flex2GoTimecardField;
+
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired = false)]
+        [XmlElementAttribute(Namespace = "http://www.flex2go.nl/2016-06", IsNullable = true)]
+        public Flex2GoTimecardType Flex2GoTimecard
+        {
+            get
+            {
+                return this.flex2GoTimecardField;
+            }
+            set
+            {
+                if ((this.flex2GoTimecardField != null))
+                {
+                    if ((flex2GoTimecardField.Equals(value) != true))
+                    {
+                        this.flex2GoTimecardField = value;
+                        this.OnPropertyChanged("Flex2GoTimecard");
+                    }
+                }
+                else
+                {
+                    this.flex2GoTimecardField = value;
+                    this.OnPropertyChanged("Flex2GoTimecard");
+                }
+            }
+        }
+
+        private bool flex2GoTimecardFieldSpecified;
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Flex2GoTimecardSpecified
+        {
+            get
+            {
+                return this.flex2GoTimecardFieldSpecified;
+            }
+            set
+            {
+                if ((flex2GoTimecardFieldSpecified.Equals(value) != true))
+                {
+                    this.flex2GoTimecardFieldSpecified = value;
+                    this.OnPropertyChanged("Flex2GoTimecardSpecified");
+                }
+            }
+        }
 
         private Flex2GoHumanResourceType flex2GoHumanResourceTypeField;
 

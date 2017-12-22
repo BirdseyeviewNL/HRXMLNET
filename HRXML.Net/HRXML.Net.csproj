@@ -356,6 +356,12 @@
     <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Document.designer.cs">
       <DependentUpon>Document.cs</DependentUpon>
     </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Flex2GoTimecard.cs">
+      <DependentUpon>Flex2GoTimecard.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Flex2GoTimecard.Designer.cs">
+      <DependentUpon>Flex2GoTimecard.cs</DependentUpon>
+    </Compile>
     <Compile Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Flex2GoAssignment.cs">
       <DependentUpon>Flex2GoAssignment.xsd</DependentUpon>
     </Compile>
@@ -1293,6 +1299,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Scab\ScabAssignment.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRXML200704\HR-XML-2_5\SIDES\NL\Flex2GO\Flex2GoTimecard.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
