@@ -24,7 +24,10 @@
             <!-- TaxHandlingCode -->
             <xsd:element name="TaxHandlingCode" type="xsd:string" minOccurs="0" />
             <!-- TaxHandlingDescription -->
-            <xsd:element name="TaxHandlingDescription" type="xsd:string" minOccurs="0" />           
+            <xsd:element name="TaxHandlingDescription" type="xsd:string" minOccurs="0" />
+            <!-- PercentageBlockedAccount -->
+            <xsd:element name="PercentageBlockedAccount" type="xsd:decimal" minOccurs="0" />
+
         </xsd:sequence>
     </xsd:complexType>
 

@@ -38,6 +38,10 @@ namespace HRXML.Net
 
         private string taxHandlingDescriptionField;
 
+        private decimal percentageBlockedAccountField;
+
+        private bool percentageBlockedAccountFieldSpecified;
+
         /// <remarks/>
         public string CostCenterCode
         {
@@ -113,6 +117,33 @@ namespace HRXML.Net
             set
             {
                 this.taxHandlingDescriptionField = value;
+            }
+        }
+
+        /// <remarks/>
+        public decimal PercentageBlockedAccount
+        {
+            get
+            {
+                return this.percentageBlockedAccountField;
+            }
+            set
+            {
+                this.percentageBlockedAccountField = value;
+            }
+        }
+
+        /// <remarks/>
+        [XmlIgnore]
+        public bool PercentageBlockedAccountSpecified
+        {
+            get
+            {
+                return this.percentageBlockedAccountFieldSpecified;
+            }
+            set
+            {
+                this.percentageBlockedAccountFieldSpecified = value;
             }
         }
     }
