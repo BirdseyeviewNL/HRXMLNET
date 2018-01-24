@@ -42,6 +42,8 @@ namespace HRXML.Net
 
         private bool percentageBlockedAccountFieldSpecified;
 
+        private string paymentMethodField;
+
         /// <remarks/>
         public string CostCenterCode
         {
@@ -144,6 +146,19 @@ namespace HRXML.Net
             set
             {
                 this.percentageBlockedAccountFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public string PaymentMethod
+        {
+            get
+            {
+                return this.paymentMethodField;
+            }
+            set
+            {
+                this.paymentMethodField = value;
             }
         }
     }
