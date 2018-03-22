@@ -44,6 +44,11 @@ namespace HRXML.Net
 
         private string paymentMethodField;
 
+        private bool combinePeriodsField;
+
+        private bool combinePeriodsFieldSpecified;
+
+
         /// <remarks/>
         public string CostCenterCode
         {
@@ -159,6 +164,33 @@ namespace HRXML.Net
             set
             {
                 this.paymentMethodField = value;
+            }
+        }
+
+        /// <remarks/>
+        public bool CombinePeriods
+        {
+            get
+            {
+                return this.combinePeriodsField;
+            }
+            set
+            {
+                this.combinePeriodsField = value;
+            }
+        }
+
+        /// <remarks/>
+        [XmlIgnore]
+        public bool CombinePeriodsSpecified
+        {
+            get
+            {
+                return this.combinePeriodsFieldSpecified;
+            }
+            set
+            {
+                this.combinePeriodsFieldSpecified = value;
             }
         }
     }

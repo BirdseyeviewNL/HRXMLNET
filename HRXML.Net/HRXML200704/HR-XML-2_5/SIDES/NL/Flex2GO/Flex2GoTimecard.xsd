@@ -27,8 +27,10 @@
             <xsd:element name="TaxHandlingDescription" type="xsd:string" minOccurs="0" />
             <!-- PercentageBlockedAccount -->
             <xsd:element name="PercentageBlockedAccount" type="xsd:decimal" minOccurs="0" />
-            <!-- PercentageBlockedAccount -->
+            <!-- PaymentMethod -->
             <xsd:element name="PaymentMethod" type="xsd:string" minOccurs="0" />
+            <!-- CombinePeriods -->
+            <xsd:element name="CombinePeriods" type="xsd:boolean" minOccurs="0" />
         </xsd:sequence>
     </xsd:complexType>
 
