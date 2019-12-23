@@ -11,8 +11,9 @@
 		</xsd:documentation>
 	</xsd:annotation>
 	<xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../BankAccountInfo.xsd"/>
-	<xsd:include schemaLocation="NocoreLocation.xsd"/>
-	<xsd:element name="NocoreHumanResource" type="NocoreHumanResourceType"/>
+  <xsd:import namespace="http://ns.hr-xml.org/2007-04-15" schemaLocation="../../../../CPO/EntityIdType.xsd" />
+  <xsd:include schemaLocation="NocoreLocation.xsd"/>
+  <xsd:element name="NocoreHumanResource" type="NocoreHumanResourceType"/>
 	<xsd:simpleType name="EmployeeStatusType">
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="candidate"/>
@@ -79,6 +80,28 @@
       <xsd:element name="ContractEndDate" type="xsd:date" minOccurs="0" />
       <xsd:element name="ContractHoursPerWeek" type="xsd:float" minOccurs="0" />
       <xsd:element name="Modified" type="xsd:dateTime" />
+      <xsd:element name="nocoreFlexHumanResourceFases" type="nocoreFlexHumanResourceFasesType" minOccurs="0" maxOccurs="1" />
 		</xsd:sequence>
 	</xsd:complexType>
+  <xsd:complexType name="nocoreFlexHumanResourceFasesType">
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="nocoreFlexHumanResourceFase" type="nocoreFlexHumanResourceFaseType"/>
+      </xsd:sequence>
+  </xsd:complexType>
+<xsd:complexType name="nocoreFlexHumanResourceFaseType">
+	<xsd:sequence>
+		<xsd:element minOccurs="0" maxOccurs="unbounded" name="humanResourceFaseID" type="hr:EntityIdType"/>
+		<xsd:element minOccurs="0" maxOccurs="unbounded" name="nocoreFlexFaseID" type="hr:EntityIdType"/>
+		<xsd:element minOccurs="0" maxOccurs="unbounded" name="caoID" type="hr:EntityIdType"/>
+		<xsd:element minOccurs="0" maxOccurs="unbounded" name="payrollCaoID" type="hr:EntityIdType"/>
+		<xsd:element minOccurs="0" maxOccurs="unbounded" name="employeeLaborRelationCode" type="hr:EntityIdType"/>
+		<xsd:element minOccurs="1" maxOccurs="1" name="validFrom" type="xsd:date"/>
+		<xsd:element minOccurs="0" maxOccurs="1" name="validTo" type="xsd:date"/>
+		<xsd:element minOccurs="0" maxOccurs="1" name="workedWeeksFase" type="xsd:int"/>
+		<xsd:element minOccurs="0" maxOccurs="1" name="lastWorkedWeekFase" type="xsd:date"/>
+		<xsd:element minOccurs="0" maxOccurs="1" name="contractCount" type="xsd:int"/>
+		<xsd:element minOccurs="0" maxOccurs="1" name="durationInDays" type="xsd:int"/>
+		<xsd:element minOccurs="1" maxOccurs="1" name="cancelled" type="xsd:boolean"/>
+  </xsd:sequence>
+</xsd:complexType>
 </xsd:schema>
