@@ -481,7 +481,6 @@ namespace HRXML.Net
             }
         }
 
-        [System.Xml.Serialization.XmlArrayItemAttribute("nocoreFlexHumanResourceFase", IsNullable = false)]
         [System.Runtime.Serialization.DataMemberAttribute(Name = "nocoreFlexHumanResourceFase")]
         public List<nocoreFlexHumanResourceFaseType> nocoreFlexHumanResourceFases
         {
